@@ -273,6 +273,41 @@ section.card h2 {
 
 /* IMPORTANT: this patch does NOT touch .split-title or header alignment,
    so "KRYPTON DANCE STUDIO BAJAGOLI" positioning remains exactly as before. */
+#founder,
+#our-studio,
+#achievements,
+#gallery {
+  background-color: #000;
+  color: #fff;
+}
+
+#founder h2,
+#our-studio h2,
+#achievements h2,
+#gallery h2 {
+  color: #fff;
+}
+
+#founder a,
+#our-studio a,
+#achievements a,
+#gallery a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#founder li,
+#our-studio li,
+#achievements li,
+#gallery li {
+  color: inherit;
+}
+
+.slider-container {
+  background: transparent;
+}
+
+
 
 
 
