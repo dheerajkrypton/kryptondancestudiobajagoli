@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KRYPTON DANCE STUDIO BAJAGOLI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="images/logo1.jpg" alt="KRYPTON DANCE STUDIO BAJAGOLI Logo" class="logo" />
+    </div>
+    <button id="menuBtn" class="menu-icon" aria-label="Open menu">&#9776;</button>
+  </header>
+
+  <!-- Side menu -->
+  <nav id="sideMenu" class="side-menu" aria-hidden="true">
+    <button id="closeMenu" class="close-btn" aria-label="Close menu">&times;</button>
+    <a href="#founder" onclick="closeMenu()">Founder & Instructor</a>
+    <a href="#our-studio" onclick="closeMenu()">Our Studio</a>
+    <a href="#achievements" onclick="closeMenu()">Achievements</a>
+    <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#classes" onclick="closeMenu()">Classes & Timings</a>
+    <a href="#rules" onclick="closeMenu()">Rules & Regulations</a>
+    <a href="#registration" onclick="closeMenu()">Registration</a>
+    <a href="#our-services" onclick="closeMenu()">Our Services</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="#location" onclick="closeMenu()">Location</a>
+    <a href="#about" onclick="closeMenu()">About Us</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="studio-title" role="banner" aria-label="Studio title">
+    <h1 class="split-title" aria-label="KRYPTON DANCE STUDIO BAJAGOLI">
+      <span>KRYPTON</span>
+      <span>DANCE</span>
+      <span>STUDIO</span>
+      <span>BAJAGOLI</span>
+    </h1>
+  </section>
+
+  <main>
+
+    <!-- Founder Section -->
+    <section id="founder" class="card" aria-label="Founder & Instructor">
+      <img src="images/d.jpeg" alt="Instructor Dheeraj Krypton" class="instructor-img-centered" />
+      <div class="founder-text-overlay">
+        <h2>Founder & Instructor</h2>
+        <p class="founder-name"><strong>DHEERAJ KRYPTON</strong></p>
+        <p class="founder-desc">A self taught artist with a passion for dance and creativity.</p>
+      </div>
+    </section>
+
+    <!-- Our Studio Slider -->
+    <section id="our-studio" class="card">
+      <h2>Our Studio</h2>
+      <div class="slider-container">
+        <div class="slide active"><img src="images/logo2.jpg" alt="Studio Logo"></div>
+        <div class="slide"><video controls preload="metadata"><source src="videos/video1.mp4" type="video/mp4"></video></div>
+        <div class="slide"><video controls preload="metadata"><source src="videos/video2.mp4" type="video/mp4"></video></div>
+        <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Achievements Slider -->
+    <section id="achievements" class="card">
+      <h2>Achievements</h2>
+
+      <article class="achievement-item">
+        <h3>QUARTERFINAL ROUND IN DANCE WARRIORS 3</h3>
+        <div class="slider-container">
+          <div class="slide active"><img src="images/image3.jpg" alt="Dance Warriors 3 - 1"></div>
+          <div class="slide"><img src="images/image4.jpg" alt="Dance Warriors 3 - 2"></div>
+          <div class="slide"><img src="images/image5.jpg" alt="Dance Warriors 3 - 3"></div>
+          <div class="slide"><img src="images/image6.jpg" alt="Dance Warriors 3 - 4"></div>
+          <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
+        </div>
+      </article>
+
+      <article class="achievement-item">
+        <h3>UCCHILA YUVA DASARA 2024</h3>
+        <div class="slider-container">
+          <div class="slide active"><img src="images/image9.jpg" alt="Ucchila Yuva Dasara"></div>
+          <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Gallery Slider -->
+    <section id="gallery" class="card">
+      <h2>Gallery</h2>
+
+      <h3>Images</h3>
+      <div class="slider-container">
+        <div class="slide active"><img src="images/image1.jpg" alt="Gallery 1"></div>
+        <div class="slide"><img src="images/image2.jpg" alt="Gallery 2"></div>
+        <div class="slide"><img src="images/image7.jpg" alt="Gallery 7"></div>
+        <div class="slide"><img src="images/image8.jpg" alt="Gallery 8"></div>
+        <div class="slide"><img src="images/image10.jpg" alt="Gallery 10"></div>
+        <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
+      </div>
+
+      <h3 style="margin-top: 24px;">Videos</h3>
+      <div class="slider-container">
+        <div class="slide active"><video controls preload="metadata"><source src="videos/video3.mp4" type="video/mp4"></video></div>
+        <div class="slide"><video controls preload="metadata"><source src="videos/video4.mp4" type="video/mp4"></video></div>
+        <div class="slide"><video controls preload="metadata"><source src="videos/video5.mp4" type="video/mp4"></video></div>
+        <div class="slide"><video controls preload="metadata"><source src="videos/video6.mp4" type="video/mp4"></video></div>
+        <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- Other sections unchanged -->
+    <section id="classes" class="card">
+      <h2>Dance Styles</h2>
+      <ul class="centered-list">
+        <li>HIP HOP</li>
+        <li>BOLLYWOOD</li>
+        <li>SEMI CLASSICAL</li>
+        <li>FOLK</li>
+        <li>ART OF FREESTYLE</li>
+      </ul>
+      <h2 style="margin-top:18px;">Class Timings</h2>
+      <ul class="centered-list">
+        <li>Monday: 9:30 AM - 8:00 PM</li>
+        <li>Tuesday: 9:30 AM - 8:00 PM</li>
+        <li>Wednesday: 9:30 AM - 8:00 PM</li>
+        <li>Thursday: 9:30 AM - 8:00 PM</li>
+        <li>Friday: 9:30 AM - 8:00 PM</li>
+        <li>Saturday: 9:30 AM - 8:00 PM</li>
+        <li>Sunday: 9:30 AM - 8:00 PM</li>
+      </ul>
+    </section>
+
+    <section id="rules" class="card">
+      <h2>Rules & Regulations</h2>
+      <p>Details about rules and regulations will be updated here soon.</p>
+    </section>
+
+    <section id="registration" class="card">
+      <h2>Registration</h2>
+      <p>Please download the form, print it, fill it out and sign it. Bring the signed form to the class.</p>
+      <a href="images/registration_form.pdf" target="_blank" download>Download Registration Form</a>
+    </section>
+
+    <section id="our-services" class="card">
+      <h2>Our Services</h2>
+      <p>Details about our services will be updated here soon.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p><strong>Phone:</strong> 9606187817</p>
+      <p><strong>Email:</strong> <a href="mailto:kryptondancestudio@gmail.com">kryptondancestudio@gmail.com</a></p>
+      <p><strong>Instagram (Founder):</strong> <a href="https://instagram.com/dheerajkrypton" target="_blank">@dheerajkrypton</a></p>
+      <p><strong>Instagram (Studio):</strong> <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank">@krypton_dance_studio_bajagoli</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/dheerajkryptonfb" target="_blank">https://www.facebook.com/dheerajkryptonfb</a></p>
+      <p><strong>YouTube:</strong> <a href="https://www.youtube.com/results?search_query=dheeraj+krypton" target="_blank">https://youtu.be/zbY0e2RGHyM</a></p>
+    </section>
+
+    <section id="location" class="card">
+      <h2>LOCATION</h2>
+      <div class="map-container" style="border-radius:8px; overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.4978470409837!2d75.0631240152308!3d13.198526777783591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb515bcba40847%3A0xf9f581389ee6f0d4!2sKRYPTON%20DANCE%20STUDIO!5e0!3m2!1sen!2sin!4v1691580868994!5m2!1sen!2sin"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>ABOUT US</h2>
+      <p>At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥</p>
+      <p><strong>Opening date:</strong> 26 July 2019</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 KRYPTON DANCE STUDIO BAJAGOLI. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
