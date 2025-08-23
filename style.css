@@ -85,7 +85,7 @@ header.site-header {
 .split-title {
   margin: 0;
   color: #fff;
-  font-size: clamp(32px, 8vw, 84px);
+  font-size: clamp(32px, 8vw, 100px);
   font-weight: 900;
   font-style: italic;
   letter-spacing: 2px;
@@ -273,4 +273,5 @@ section.card h2 {
 
 /* IMPORTANT: this patch does NOT touch .split-title or header alignment,
    so "KRYPTON DANCE STUDIO BAJAGOLI" positioning remains exactly as before. */
+
 
