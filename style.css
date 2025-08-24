@@ -134,7 +134,7 @@ section.card h2 {
   text-align: center;
 }
 
-/* Founder */
+/* Founder Section */
 #founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
@@ -158,8 +158,12 @@ section.card h2 {
   align-items: center;
   gap: 8px;
 }
+.founder-name .founder-insta i {
+  color: white;
+  font-size: 20px;
+}
+.founder-name .founder-insta:hover i { color: #ff4500; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
-.founder-name .social-icons i { color: white; font-size: 20px; }
 
 /* GLOBAL SLIDER RULES */
 .slider-container {
@@ -216,9 +220,9 @@ section.card h2 {
   display: block;
   margin: 4px auto;
 }
-@media (max-width: 480px) {
-  .dance-style-item { flex: 1 1 100%; max-width: 100%; }
-}
+
+/* Art of Freestyle center */
+.art-of-freestyle { display: block; margin: 0 auto; }
 
 /* Social Icons */
 .social-icons a {
@@ -248,6 +252,7 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
+  .dance-style-item { flex: 1 1 100%; max-width: 100%; }
 }
 
 /* DESKTOP / LARGE SCREENS */
