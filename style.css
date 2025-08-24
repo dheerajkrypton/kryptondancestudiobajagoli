@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #333; /* overall grey background */
+  background: #333; /* grey background */
   color: #fff; /* text white */
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -149,7 +149,16 @@ section.card h2 {
   text-align: center; /* center name and icon */
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: #fff; font-style: italic; display:flex; justify-content:center; align-items:center; gap:8px; }
+.founder-name { 
+  font-size: 20px; 
+  margin: 0 0 4px; 
+  color: #fff; 
+  font-style: italic; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  gap:8px; 
+}
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
 
 /* GLOBAL SLIDER RULES */
@@ -197,7 +206,10 @@ section.card h2 {
 }
 .style-card img { width: 100%; border-radius:8px; display:block; margin:0 auto; }
 
-/* Contact icons */
+/* Art of Freestyle center alignment */
+.style-card.freestyle img { display: block; margin: 0 auto; }
+
+/* Contact icons horizontal */
 .contact-icons {
   display: flex;
   flex-direction: column;
