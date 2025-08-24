@@ -100,20 +100,19 @@ header.site-header {
 }
 .split-title span { display:block; }
 
-/* moved About text under hero title */
-.hero-subtext {
-  position: relative;
-  z-index: 1;
-  margin: 10px auto 0;
-  padding: 0 12px;
-  max-width: 900px;
-  text-align: center;
+/* HERO description */
+.studio-description {
+  margin-top: 12px;
   color: #fff;
-  font-size: clamp(14px, 2.7vw, 18px);
-  line-height: 1.5;
+  font-size: clamp(16px, 3vw, 22px);
+  text-align: center;
+  max-width: 900px;
+  z-index: 1;
+  position: relative;
+  line-height: 1.4;
 }
 
-/* Section headings inside .card */
+/* Section headings */
 section.card h2 {
   margin-top: 0;
   color: black;
@@ -153,23 +152,11 @@ section.card h2 {
   margin-bottom: 6px;
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-
-/* inline founder name + insta */
-.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; display:inline-flex; align-items:center; gap:8px; }
-.founder-insta-inline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-}
-.founder-insta-inline:hover { color: #ffcc00; }
+.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
+
+/* Founder Insta icon */
+.founder-name a { color: #fff; font-size: 20px; display:inline-block; text-decoration:none; }
 
 /* GLOBAL SLIDER RULES */
 .slider-container {
@@ -218,7 +205,7 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
-  .founder-insta-inline { width:24px; height:24px; font-size:14px; }
+  /* keep founder overlay static above image (mobile) - already set */
 }
 
 /* DESKTOP / LARGE SCREENS */
@@ -240,119 +227,105 @@ section.card h2 {
   .slider-container { max-width: 920px; }
 }
 
-/* === original patch: several sections black bg + white text (kept) === */
-#classes,
+/* === PATCH: make specific sections black bg + white text === */
 #rules,
 #registration,
-#our-services,
-#contact,
-#location,
-#about {
-  background-color: #000;
-  color: #fff;
+#our-services {
+  background-color: #000; 
+  color: #fff;            
 }
-#classes h2,
+
 #rules h2,
 #registration h2,
-#our-services h2,
-#contact h2,
-#location h2,
-#about h2 {
+#our-services h2 {
   color: #fff;
 }
-#classes a,
+
 #rules a,
 #registration a,
-#our-services a,
-#contact a,
-#location a,
-#about a {
+#our-services a {
   color: #fff;
   text-decoration: underline;
 }
-#classes li,
+
 #rules li,
 #registration li,
-#our-services li,
-#contact li,
-#location li,
-#about li {
+#our-services li {
   color: inherit;
 }
-#classes * ,
-#rules * ,
-#registration * ,
-#our-services * ,
-#contact * ,
-#location * ,
-#about * {
+
+#rules *, #registration *, #our-services * {
   color: inherit !important;
 }
 
-/* === CONTACT override: dark grey + stacked icons === */
+/* === CONTACT SECTION DARK GREY + SOCIAL ICONS === */
 #contact {
-  background-color: #2b2b2b; /* dark grey */
+  background-color: #1f1f1f;
   color: #fff;
-}
-#contact .social-icons {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 12px;
 }
-#contact .social-icons a {
-  color: #fff !important;
+
+.contact-icons a {
+  color: #fff;
   font-size: 28px;
-  text-decoration: none;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
 }
-#contact .social-icons a:hover {
-  color: #ffcc00 !important;
-  transform: scale(1.04);
-}
+
+.contact-icons a:hover { color: #ff4500; }
 
 /* === CLASSES / Dance Styles: force white background + grid (title above each image) === */
 #classes {
   background-color: #fff !important; /* ensure white for this section */
   color: #000 !important;
 }
-/* layout: 2 per row, last centered */
+
 #classes .style-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   justify-items: center;
   align-items: start;
   margin-top: 12px;
 }
+
 #classes .style-card {
   text-align: center;
-  max-width: 420px;
+  max-width: 260px;
 }
+
 #classes .style-card h3 {
   font-size: 18px;
   margin-bottom: 8px;
   letter-spacing: 0.6px;
   color: #111;
 }
+
 #classes .style-card img {
   width: 100%;
-  max-width: 420px;
+  max-width: 260px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
-/* center the last card when odd number */
+
 #classes .style-grid .style-card:last-child {
   grid-column: 1 / -1;
   justify-self: center;
-  max-width: 520px;
 }
 
-/* responsive tweak: single column on small screens */
 @media (max-width: 600px) {
   #classes .style-grid {
     grid-template-columns: 1fr;
