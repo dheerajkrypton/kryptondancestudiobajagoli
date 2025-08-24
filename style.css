@@ -7,10 +7,10 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #555; /* grey background for all sections */
-  color: white;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+  background: #333;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header */
@@ -36,6 +36,7 @@ header.site-header {
   line-height: 1;
   padding: 6px 8px;
   color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 
 /* Side menu */
@@ -45,7 +46,7 @@ header.site-header {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333;
+  background-color: #222;
   overflow-x: hidden;
   transition: width 0.28s ease;
   padding-top: 60px;
@@ -59,7 +60,7 @@ header.site-header {
   display: block;
   transition: background-color 0.2s;
 }
-.side-menu a:hover { background-color: #444; }
+.side-menu a:hover { background-color: #555; }
 .side-menu .close-btn {
   position:absolute; top:8px; left:14px; font-size:30px; background:none; border:none; color:white; cursor:pointer;
 }
@@ -83,7 +84,7 @@ header.site-header {
 }
 .split-title {
   margin: 0;
-  color: white;
+  color: #fff;
   font-size: clamp(32px, 8vw, 84px);
   font-weight: 900;
   font-style: italic;
@@ -94,22 +95,25 @@ header.site-header {
   z-index: 1;
   text-transform: uppercase;
   -webkit-text-stroke: 2px black;
+  paint-order: stroke fill;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 .split-title span { display:block; }
 
+/* About description below title */
 .studio-description {
+  color: #fff;
+  max-width: 900px;
   text-align: center;
   margin-top: 12px;
   font-size: 16px;
-  max-width: 800px;
-  z-index: 1;
-  position: relative;
+  line-height: 1.5;
 }
 
 /* Section headings */
 section.card h2 {
   margin-top: 0;
+  color: #fff;
   border-bottom: 3px solid #ff4500;
   padding-bottom: 6px;
   letter-spacing: 1.5px;
@@ -122,7 +126,8 @@ section.card h2 {
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
-  color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #fff;
   text-align: center;
   position: relative;
   overflow: visible;
@@ -134,52 +139,114 @@ section.card h2 {
 #founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
-  position: static; /* mobile-first: static so text appears above image */
-  transform: none;
-  left: auto;
-  top: auto;
-  width: auto;
-  background: transparent;
-  padding: 0;
-  margin-bottom: 6px;
+  text-align: center;
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name { font-size: 20px; margin: 0 0 4px; font-style: italic; text-align:center; }
+.founder-name { font-size: 20px; margin: 0 0 4px; color: #fff; font-style: italic; text-align: center; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
 
-/* Contact icons */
-.contact-icons { display:flex; flex-direction: column; gap:8px; align-items:center; }
-.contact-icons div { display:flex; justify-content:center; gap:12px; }
-.contact-icons i { font-size:28px; color:white; }
-
-/* Dance styles grid */
-.style-grid {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
-  gap:16px;
-  justify-items:center;
-  margin-top:16px;
+/* Social icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
 }
-.style-card img { width:100%; max-width:160px; border-radius:6px; display:block; margin:0 auto; }
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  display: inline-block;
+}
 
-/* Special center for freestyle */
-.style-card.freestyle img { margin-left:auto; margin-right:auto; }
-
-/* Slider */
-.slider-container { position: relative; max-width: 600px; width: 100%; margin: 18px auto; overflow: hidden; border-radius: 8px; background: transparent; }
+/* GLOBAL SLIDER RULES */
+.slider-container {
+  position: relative;
+  max-width: 600px;
+  width: 100%;
+  margin: 18px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  background: transparent;
+}
 .slider-container .slide { display: none; text-align: center; }
 .slider-container .slide.active { display: block; }
-.slider-container img, .slider-container video { width: 100%; height: auto; border-radius: 8px; object-fit: cover; display: block; }
-.slider-arrow { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(255, 69, 0, 0.5); border: none; color: white; font-size: 22px; padding: 8px 10px; cursor: pointer; border-radius: 6px; z-index: 10; }
+.slider-container img, .slider-container video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 69, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10;
+}
 .slider-arrow:hover { background-color: rgba(255, 69, 0, 0.85); }
 .left-arrow { left: 8px; }
 .right-arrow { right: 8px; }
 
-/* Lists */
+/* Dance Styles Grid */
+.dance-styles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 12px;
+}
+.dance-style-item img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Contact Section */
+#contact {
+  background: #444;
+  color: #fff;
+}
+#contact .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* Registration link white */
+#registration a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Other small utilities */
+.achievement-item { margin-bottom: 20px; text-align: center; }
 .centered-list { list-style:none; padding:0; margin:0 auto; max-width:320px; font-weight:700; text-align:center; }
 
-/* Media Queries */
-@media (min-width:768px){
-  .founder-text-overlay { position:absolute; left:50%; top:24px; transform:translateX(-50%); width:90%; max-width:900px; text-shadow:0 0 3px rgba(255,255,255,0.7); }
-  .slider-container { max-width:920px; }
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 767px) {
+  .card { margin: 12px 12px; padding: 16px; }
+  .slider-container { max-width: 100%; margin: 12px auto; border-radius: 10px; }
+  .slider-arrow { font-size: 20px; padding: 7px 9px; }
+  .left-arrow { left: 6px; }
+  .right-arrow { right: 6px; }
+  .dance-styles-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
+}
+
+/* DESKTOP / LARGE SCREENS */
+@media (min-width: 768px) {
+  .card { padding: 24px 32px; }
+  #founder { display: block; }
+  .slider-container { max-width: 920px; }
+  .dance-style-item img { max-width: 180px; }
 }
