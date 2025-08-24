@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KRYPTON DANCE STUDIO BAJAGOLI</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
 
@@ -50,16 +50,14 @@
 
     <!-- Founder Section -->
     <section id="founder" class="card" aria-label="Founder & Instructor">
-      <h2>Founder & Instructor</h2>
       <img src="images/d.jpeg" alt="Instructor Dheeraj Krypton" class="instructor-img-centered" />
       <div class="founder-text-overlay">
+        <h2>Founder & Instructor</h2>
         <p class="founder-name">
           <strong>DHEERAJ KRYPTON</strong>
-          <span class="personal-insta">
-            <a href="https://instagram.com/dheerajkrypton" target="_blank"><i class="fab fa-instagram"></i></a>
-          </span>
+          <a href="https://instagram.com/dheerajkrypton" target="_blank" class="personal-insta"><i class="fab fa-instagram"></i></a>
         </p>
-        <p class="founder-desc">A self-taught artist with a passion for dance and creativity.</p>
+        <p class="founder-desc">A self taught artist with a passion for dance and creativity.</p>
       </div>
     </section>
 
@@ -78,6 +76,7 @@
     <!-- Achievements Slider -->
     <section id="achievements" class="card">
       <h2>Achievements</h2>
+
       <article class="achievement-item">
         <h3>QUARTERFINAL ROUND IN DANCE WARRIORS 3</h3>
         <div class="slider-container">
@@ -85,16 +84,17 @@
           <div class="slide"><img src="images/image4.jpg" alt="Dance Warriors 3 - 2"></div>
           <div class="slide"><img src="images/image5.jpg" alt="Dance Warriors 3 - 3"></div>
           <div class="slide"><img src="images/image6.jpg" alt="Dance Warriors 3 - 4"></div>
-          <button class="slider-arrow left-arrow">&#10094;</button>
-          <button class="slider-arrow right-arrow">&#10095;</button>
+          <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
         </div>
       </article>
+
       <article class="achievement-item">
         <h3>UCCHILA YUVA DASARA 2024</h3>
         <div class="slider-container">
           <div class="slide active"><img src="images/image9.jpg" alt="Ucchila Yuva Dasara"></div>
-          <button class="slider-arrow left-arrow">&#10094;</button>
-          <button class="slider-arrow right-arrow">&#10095;</button>
+          <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+          <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
         </div>
       </article>
     </section>
@@ -102,6 +102,7 @@
     <!-- Gallery Slider -->
     <section id="gallery" class="card">
       <h2>Gallery</h2>
+
       <h3>Images</h3>
       <div class="slider-container">
         <div class="slide active"><img src="images/image1.jpg" alt="Gallery 1"></div>
@@ -109,21 +110,22 @@
         <div class="slide"><img src="images/image7.jpg" alt="Gallery 7"></div>
         <div class="slide"><img src="images/image8.jpg" alt="Gallery 8"></div>
         <div class="slide"><img src="images/image10.jpg" alt="Gallery 10"></div>
-        <button class="slider-arrow left-arrow">&#10094;</button>
-        <button class="slider-arrow right-arrow">&#10095;</button>
+        <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
       </div>
+
       <h3 style="margin-top: 24px;">Videos</h3>
       <div class="slider-container">
         <div class="slide active"><video controls preload="metadata"><source src="videos/video3.mp4" type="video/mp4"></video></div>
         <div class="slide"><video controls preload="metadata"><source src="videos/video4.mp4" type="video/mp4"></video></div>
         <div class="slide"><video controls preload="metadata"><source src="videos/video5.mp4" type="video/mp4"></video></div>
         <div class="slide"><video controls preload="metadata"><source src="videos/video6.mp4" type="video/mp4"></video></div>
-        <button class="slider-arrow left-arrow">&#10094;</button>
-        <button class="slider-arrow right-arrow">&#10095;</button>
+        <button class="slider-arrow left-arrow" aria-label="Previous slide">&#10094;</button>
+        <button class="slider-arrow right-arrow" aria-label="Next slide">&#10095;</button>
       </div>
     </section>
 
-    <!-- Classes -->
+    <!-- Classes & Dance Styles -->
     <section id="classes" class="card">
       <h2>Dance Styles</h2>
       <div class="dance-styles-grid">
@@ -148,6 +150,7 @@
           <img src="images/freestyle.jpg" alt="Art of Freestyle">
         </div>
       </div>
+
       <h2 style="margin-top:18px;">Class Timings</h2>
       <ul class="centered-list">
         <li>Monday: 9:30 AM - 8:00 PM</li>
@@ -160,40 +163,43 @@
       </ul>
     </section>
 
+    <!-- Rules -->
     <section id="rules" class="card">
       <h2>Rules & Regulations</h2>
       <p>Details about rules and regulations will be updated here soon.</p>
     </section>
 
+    <!-- Registration -->
     <section id="registration" class="card">
       <h2>Registration</h2>
       <p>Please download the form, print it, fill it out and sign it. Bring the signed form to the class.</p>
-      <a href="images/registration_form.pdf" target="_blank" download>Download Registration Form</a>
+      <a href="images/registration_form.pdf" target="_blank" class="registration-link">Download Form</a>
     </section>
 
+    <!-- Our Services -->
     <section id="our-services" class="card">
       <h2>Our Services</h2>
-      <p>Details about our services will be updated here soon.</p>
+      <p>Information about our services.</p>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="card">
       <h2>Contact</h2>
-      <div class="social-icons">
-        <a href="https://wa.me/919606187817" target="_blank"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.facebook.com/dheerajkryptonfb" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:kryptondancestudio@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.youtube.com/results?search_query=dheeraj+krypton" target="_blank"><i class="fab fa-youtube"></i></a>
+      <div class="contact-icons-row">
+        <a href="https://wa.me/919606187817" target="_blank" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/kryptondance/" target="_blank" class="contact-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/kryptondance/" target="_blank" class="contact-icon"><i class="fab fa-facebook"></i></a>
+      </div>
+      <div class="contact-icons-row" style="margin-top: 12px;">
+        <a href="mailto:kryptondance@gmail.com" class="contact-icon"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.youtube.com/@kryptondance" target="_blank" class="contact-icon"><i class="fab fa-youtube"></i></a>
       </div>
     </section>
 
+    <!-- Location -->
     <section id="location" class="card">
-      <h2>LOCATION</h2>
-      <div class="map-container" style="border-radius:8px; overflow:hidden;">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.4978470409837!2d75.0631240152308!3d13.198526777783591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbb515bcba40847%3A0xf9f581389ee6f0d4!2sKRYPTON%20DANCE%20STUDIO!5e0!3m2!1sen!2sin!4v1691580868994!5m2!1sen!2sin"
-          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
+      <h2>Location</h2>
+      <p>Bajagoli, Karnataka, India</p>
     </section>
 
   </main>
