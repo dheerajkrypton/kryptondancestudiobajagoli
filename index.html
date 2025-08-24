@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KRYPTON DANCE STUDIO BAJAGOLI</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -40,10 +40,7 @@
       <span>STUDIO</span>
       <span>BAJAGOLI -</span>
     </h1>
-    <p class="studio-description">
-      At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥 <br>
-      Opening date: 26 July 2019
-    </p>
+    <p class="studio-description">At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥<br>Opening date: 26 July 2019</p>
   </section>
 
   <main>
@@ -55,7 +52,9 @@
         <h2>Founder & Instructor</h2>
         <p class="founder-name">
           <strong>DHEERAJ KRYPTON</strong>
-          <a href="https://instagram.com/dheerajkrypton" target="_blank"><i class="fab fa-instagram" style="color:white;"></i></a>
+          <a href="https://instagram.com/dheerajkrypton" target="_blank" aria-label="Founder Instagram">
+            <i class="fab fa-instagram" style="color:white;"></i>
+          </a>
         </p>
         <p class="founder-desc">A self taught artist with a passion for dance and creativity.</p>
       </div>
@@ -125,44 +124,58 @@
       </div>
     </section>
 
-    <!-- Dance Styles -->
+    <!-- Classes Section -->
     <section id="classes" class="card">
       <h2>Dance Styles</h2>
       <div class="style-grid">
         <div class="style-card">
-          <h4>HIP HOP</h4>
+          <h3>HIP HOP</h3>
           <img src="images/hiphop.jpg" alt="Hip Hop">
         </div>
         <div class="style-card">
-          <h4>BOLLYWOOD</h4>
+          <h3>BOLLYWOOD</h3>
           <img src="images/bollywood.jpg" alt="Bollywood">
         </div>
         <div class="style-card">
-          <h4>SEMI CLASSICAL</h4>
+          <h3>SEMI CLASSICAL</h3>
           <img src="images/semiclassical.jpg" alt="Semi Classical">
         </div>
         <div class="style-card">
-          <h4>FOLK</h4>
+          <h3>FOLK</h3>
           <img src="images/folk.jpg" alt="Folk">
         </div>
-        <div class="style-card" style="justify-self:center;">
-          <h4>ART OF FREESTYLE</h4>
+        <div class="style-card freestyle">
+          <h3>ART OF FREESTYLE</h3>
           <img src="images/freestyle.jpg" alt="Art of Freestyle">
         </div>
       </div>
+
+      <h2 style="margin-top:18px;">Class Timings</h2>
+      <ul class="centered-list">
+        <li>Monday: 9:30 AM - 8:00 PM</li>
+        <li>Tuesday: 9:30 AM - 8:00 PM</li>
+        <li>Wednesday: 9:30 AM - 8:00 PM</li>
+        <li>Thursday: 9:30 AM - 8:00 PM</li>
+        <li>Friday: 9:30 AM - 8:00 PM</li>
+        <li>Saturday: 9:30 AM - 8:00 PM</li>
+        <li>Sunday: 9:30 AM - 8:00 PM</li>
+      </ul>
     </section>
 
+    <!-- Rules Section -->
     <section id="rules" class="card">
       <h2>Rules & Regulations</h2>
       <p>Details about rules and regulations will be updated here soon.</p>
     </section>
 
+    <!-- Registration Section -->
     <section id="registration" class="card">
       <h2>Registration</h2>
       <p>Please download the form, print it, fill it out and sign it. Bring the signed form to the class.</p>
       <a href="images/registration_form.pdf" target="_blank" download>Download Registration Form</a>
     </section>
 
+    <!-- Services Section -->
     <section id="our-services" class="card">
       <h2>Our Services</h2>
       <p>Details about our services will be updated here soon.</p>
@@ -173,17 +186,18 @@
       <h2>Contact</h2>
       <div class="contact-icons">
         <div>
-          <a href="https://wa.me/919606187817" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
-          <a href="https://www.facebook.com/dheerajkryptonfb" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-          <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="https://wa.me/919606187817" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank" aria-label="Studio Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/dheerajkryptonfb" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
         </div>
-        <div style="margin-top:12px;">
-          <a href="mailto:kryptondancestudio@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
-          <a href="https://www.youtube.com/results?search_query=dheeraj+krypton" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+        <div>
+          <a href="mailto:kryptondancestudio@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.youtube.com/results?search_query=dheeraj+krypton" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
     </section>
 
+    <!-- Location Section -->
     <section id="location" class="card">
       <h2>LOCATION</h2>
       <div class="map-container" style="border-radius:8px; overflow:hidden;">
