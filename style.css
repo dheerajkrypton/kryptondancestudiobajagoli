@@ -111,6 +111,12 @@ header.site-header {
   position: relative;
 }
 
+/* HERO text stays white */
+.studio-title .split-title,
+.studio-title .studio-description {
+  color: #fff !important;
+}
+
 /* Section headings */
 section.card h2 {
   margin-top: 0;
@@ -151,6 +157,15 @@ section {
   background-color: #d9d9d9 !important; /* same light grey as other sections */
   color: #000;
   padding: 12px;
+  border-radius: 8px;
+}
+
+/* ===== REDUCE SIZE OF DANCE STYLES IMAGES ===== */
+#classes .dance-style-item img {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
   border-radius: 8px;
 }
 
