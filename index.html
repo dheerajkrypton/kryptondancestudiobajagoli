@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>KRYPTON DANCE STUDIO BAJAGOLI</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for social icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Add Font Awesome CDN for social icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -18,7 +18,7 @@
     <button id="menuBtn" class="menu-icon" aria-label="Open menu">&#9776;</button>
   </header>
 
-  <!-- Side menu (About link removed) -->
+  <!-- Side menu -->
   <nav id="sideMenu" class="side-menu" aria-hidden="true">
     <button id="closeMenu" class="close-btn" aria-label="Close menu">&times;</button>
     <a href="#founder" onclick="closeMenu()">Founder & Instructor</a>
@@ -39,14 +39,11 @@
       <span>KRYPTON</span>
       <span>DANCE</span>
       <span>STUDIO</span>
-      <span>BAJAGOLI</span>
+      <span>BAJAGOLI -</span>
     </h1>
-
-    <!-- About text moved under title (small, centered) -->
-    <p class="hero-subtext">
-      <strong>KRYPTON DANCE STUDIO BAJAGOLI –</strong>
-      At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥
-      <br><br><strong>Opening date:</strong> 26 July 2019
+    <p class="studio-description">
+      At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥<br>
+      <strong>Opening date:</strong> 26 July 2019
     </p>
   </section>
 
@@ -57,15 +54,12 @@
       <img src="images/d.jpeg" alt="Instructor Dheeraj Krypton" class="instructor-img-centered" />
       <div class="founder-text-overlay">
         <h2>Founder & Instructor</h2>
-
-        <!-- name with inline personal Instagram icon -->
         <p class="founder-name">
           <strong>DHEERAJ KRYPTON</strong>
-          <a href="https://instagram.com/dheerajkrypton" target="_blank" rel="noopener" aria-label="Founder Instagram" class="founder-insta-inline">
-            <i class="fab fa-instagram" aria-hidden="true"></i>
+          <a href="https://instagram.com/dheerajkrypton" target="_blank" aria-label="Founder Instagram">
+            <i class="fab fa-instagram"></i>
           </a>
         </p>
-
         <p class="founder-desc">A self taught artist with a passion for dance and creativity.</p>
       </div>
     </section>
@@ -134,11 +128,9 @@
       </div>
     </section>
 
-    <!-- CLASSES / Dance Styles (white background, title above each image) -->
+    <!-- Classes / Dance Styles -->
     <section id="classes" class="card">
       <h2>Dance Styles</h2>
-
-      <!-- styles grid: each title followed by its image (2 per row, last centered) -->
       <div class="style-grid">
         <div class="style-card">
           <h3>HIP HOP</h3>
@@ -158,11 +150,10 @@
         </div>
         <div class="style-card">
           <h3>ART OF FREESTYLE</h3>
-          <img src="images/freestyle.jpg" alt="Art of Freestyle">
+          <img src="images/artoffreestyle.jpg" alt="Art of Freestyle">
         </div>
       </div>
 
-      <!-- Class Timings (unchanged) -->
       <h2 style="margin-top:18px;">Class Timings</h2>
       <ul class="centered-list">
         <li>Monday: 9:30 AM - 8:00 PM</li>
@@ -191,26 +182,18 @@
       <p>Details about our services will be updated here soon.</p>
     </section>
 
-    <!-- Contact: phone removed; icons stacked vertically; WhatsApp and Email included -->
-    <section id="contact" class="card">
+    <!-- Contact Section with vertical icons -->
+    <section id="contact" class="card contact-icons">
       <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:kryptondancestudio@gmail.com">kryptondancestudio@gmail.com</a></p>
-
-      <div class="social-icons">
-        <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank" aria-label="Instagram Studio">
-          <i class="fab fa-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.facebook.com/dheerajkryptonfb" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="https://www.youtube.com/results?search_query=dheeraj+krypton" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube" aria-hidden="true"></i>
-        </a>
+      <div class="icon-links">
         <a href="https://wa.me/919606187817" target="_blank" aria-label="WhatsApp">
-          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          <i class="fab fa-whatsapp"></i>
         </a>
         <a href="mailto:kryptondancestudio@gmail.com" aria-label="Email">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://instagram.com/krypton_dance_studio_bajagoli" target="_blank" aria-label="Studio Instagram">
+          <i class="fab fa-instagram"></i>
         </a>
       </div>
     </section>
@@ -225,8 +208,6 @@
       </div>
     </section>
 
-    <!-- About section removed -->
-
   </main>
 
   <footer>
@@ -236,4 +217,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
