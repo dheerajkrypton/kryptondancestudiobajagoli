@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff; /* main page background white */
+  background-color: #fff; /* white */
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -127,10 +127,44 @@ section.card h2 {
   color: #000;
 }
 
-/* ===== FORCE ALL SECTION BACKGROUNDS TO LIGHT GREY ===== */
-section {
-  background-color: #d9d9d9 !important; /* consistent light grey */
-  color: #000 !important;
+/* ===== SECTION BACKGROUNDS ===== */
+
+/* Founder Section */
+#founder {
+  background-color: #d9d9d9 !important; /* light grey */
+  color: #000;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #b0b0b0 !important; /* medium grey */
+  color: #000;
+}
+
+/* Dance Styles Section */
+#classes {
+  background-color: #fff !important; /* white */
+  color: #000;
+}
+
+/* Class Timings List inside Dance Styles */
+#classes .centered-list {
+  background-color: #d9d9d9 !important; /* light grey */
+  color: #000;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* All other sections */
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location {
+  background-color: #d9d9d9 !important; /* light grey */
+  color: #000;
 }
 
 /* ===== CARD BASE ===== */
@@ -146,21 +180,7 @@ section {
   max-width: 1100px;
 }
 
-/* ===== DANCE STYLE SECTION ===== */
-#classes {
-  background-color: #fff !important; /* white background for dance style section */
-  color: #000;
-}
-
-/* ===== CLASS TIMING LIST INSIDE DANCE STYLES ===== */
-#classes .centered-list {
-  background-color: #d9d9d9 !important; /* same light grey as other sections */
-  color: #000;
-  padding: 12px;
-  border-radius: 8px;
-}
-
-/* ===== REDUCE SIZE OF DANCE STYLES IMAGES ===== */
+/* ===== DANCE STYLE IMAGES REDUCED SIZE ===== */
 #classes .dance-style-item img {
   max-width: 80%;
   height: auto;
@@ -169,15 +189,7 @@ section {
   border-radius: 8px;
 }
 
-/* ===== FOUNDER SECTION ===== */
-#founder {
-  position: relative;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
+/* Founder Section Details */
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
   position: static;
