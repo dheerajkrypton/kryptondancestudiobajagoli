@@ -121,10 +121,14 @@ section.card h2 {
   color: #000;
 }
 
+/* ===== FORCE ALL SECTION BACKGROUNDS ===== */
+section {
+  background-color: #d9d9d9 !important; /* light grey by default */
+  color: #000 !important;
+}
+
 /* ===== CARD BASE ===== */
 .card {
-  background: #d9d9d9; /* light grey for all sections by default */
-  color: #000;
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
@@ -138,13 +142,13 @@ section.card h2 {
 
 /* ===== DANCE STYLE SECTION ===== */
 #classes {
-  background: #fff; /* white background for dance style section */
+  background-color: #fff !important; /* white background for dance style section */
   color: #000;
 }
 
 /* ===== CLASS TIMING LIST INSIDE DANCE STYLES ===== */
-.centered-list {
-  background: #d9d9d9; /* grey background for class timing list */
+#classes .centered-list {
+  background-color: #d9d9d9 !important; /* grey background for class timing list */
   color: #000;
   padding: 12px;
   border-radius: 8px;
@@ -152,8 +156,6 @@ section.card h2 {
 
 /* ===== FOUNDER SECTION ===== */
 #founder {
-  background: #d9d9d9; /* light grey */
-  color: #000;
   position: relative;
   overflow: visible;
   display: flex;
@@ -219,8 +221,7 @@ section.card h2 {
 
 /* ===== CONTACT SECTION ===== */
 #contact {
-  background: #d9d9d9; /* light grey */
-  color: #000;
+  /* already covered by section rule */
 }
 
 /* Other small utilities */
