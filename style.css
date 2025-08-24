@@ -7,13 +7,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #333; /* global grey background */
-  color: #fff;      /* global white text */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background: #333; /* overall grey background */
+  color: #fff; /* text white */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-/* Header (overlay on hero) */
+/* Header */
 header.site-header {
   display: flex;
   justify-content: space-between;
@@ -46,7 +46,7 @@ header.site-header {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #333;
+  background-color: black;
   overflow-x: hidden;
   transition: width 0.28s ease;
   padding-top: 60px;
@@ -60,7 +60,7 @@ header.site-header {
   display: block;
   transition: background-color 0.2s;
 }
-.side-menu a:hover { background-color: #555; }
+.side-menu a:hover { background-color: #333; }
 .side-menu .close-btn {
   position:absolute; top:8px; left:14px; font-size:30px; background:none; border:none; color:white; cursor:pointer;
 }
@@ -74,7 +74,6 @@ header.site-header {
   place-items: center;
   position: relative;
   padding: 14px 12px;
-  text-align: center;
 }
 .studio-title::before {
   content: "";
@@ -91,6 +90,7 @@ header.site-header {
   font-style: italic;
   letter-spacing: 2px;
   line-height: 1.05;
+  text-align: center;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
@@ -100,32 +100,31 @@ header.site-header {
 }
 .split-title span { display:block; }
 .studio-description {
-  max-width: 900px;
+  text-align: center;
+  color: #fff;
+  max-width: 700px;
+  z-index: 1;
   margin-top: 12px;
   font-size: 16px;
-  line-height: 1.5;
-  color: #fff;
-  z-index: 1;
-  position: relative;
 }
 
 /* Section headings */
 section.card h2 {
   margin-top: 0;
+  color: #fff;
   border-bottom: 3px solid #ff4500;
   padding-bottom: 6px;
   letter-spacing: 1.5px;
   text-align: center;
-  color: #fff;
 }
 
 /* Card base */
 .card {
-  background: #333;
+  background: #555; /* grey background for all sections */
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
   color: #fff;
   text-align: center;
   position: relative;
@@ -135,14 +134,7 @@ section.card h2 {
 }
 
 /* Founder */
-#founder {
-  position: relative;
-  overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
+#founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
   position: static;
@@ -154,17 +146,10 @@ section.card h2 {
   text-shadow: none;
   padding: 0;
   margin-bottom: 6px;
+  text-align: center; /* center name and icon */
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name {
-  font-size: 20px;
-  margin: 0 0 4px;
-  color: #fff;
-  font-style: italic;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+.founder-name { font-size: 20px; margin: 0 0 4px; color: #fff; font-style: italic; display:flex; justify-content:center; align-items:center; gap:8px; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
 
 /* GLOBAL SLIDER RULES */
@@ -206,38 +191,24 @@ section.card h2 {
 /* Dance Styles Grid */
 .style-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
   gap: 16px;
-  justify-items: center;
-  margin-top: 12px;
+  margin-top: 16px;
 }
-.style-card img {
-  width: 100%;
-  max-width: 180px;
-  border-radius: 6px;
-}
+.style-card img { width: 100%; border-radius:8px; display:block; margin:0 auto; }
 
-/* Contact Icons Vertical */
+/* Contact icons */
 .contact-icons {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  margin-top: 12px;
-}
-.contact-icons a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
-.contact-icons a:hover { color: #ff4500; }
-
-/* Other small utilities */
-.achievement-item { margin-bottom: 20px; text-align: center; }
-.centered-list { list-style:none; padding:0; margin:0 auto; max-width:320px; font-weight:700; text-align:center; }
+.contact-icons div {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
 
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 767px) {
@@ -246,7 +217,6 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
-  .style-card img { max-width: 140px; }
 }
 
 /* DESKTOP / LARGE SCREENS */
@@ -262,6 +232,7 @@ section.card h2 {
     max-width: 900px;
     text-shadow: 0 0 3px rgba(255,255,255,0.7);
     background: transparent;
+    text-align: center;
   }
   .instructor-img-centered { width:100%; max-width:900px; margin:0 auto; }
   .slider-container { max-width: 920px; }
