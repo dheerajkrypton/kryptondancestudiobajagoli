@@ -9,8 +9,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff; /* changed from #111 to white */
-  color: #000; /* text black for readability on white background */
+  background: #fff; /* main page white */
+  color: #000; /* black text for readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -118,12 +118,12 @@ section.card h2 {
   padding-bottom: 6px;
   letter-spacing: 1.5px;
   text-align: center;
-  color: #000; /* changed to black for readability */
+  color: #000; /* black text */
 }
 
 /* Card base */
 .card {
-  background: #f2f2f2; /* changed from #222 to light grey for contrast */
+  background: #fff; /* all other sections white */
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
@@ -144,8 +144,8 @@ section.card h2 {
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  background: #d9d9d9; /* light grey background */
-  color: #000; /* text black */
+  background: #d9d9d9; /* light grey */
+  color: #000; /* black text */
 }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
