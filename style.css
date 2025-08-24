@@ -85,7 +85,7 @@ header.site-header {
 .split-title {
   margin: 0;
   color: #fff;
-  font-size: clamp(40px, 10vw, 120px);
+  font-size: clamp(32px, 8vw, 84px);
   font-weight: 900;
   font-style: italic;
   letter-spacing: 2px;
@@ -100,7 +100,20 @@ header.site-header {
 }
 .split-title span { display:block; }
 
-/* Section headings */
+/* moved About text under hero title */
+.hero-subtext {
+  position: relative;
+  z-index: 1;
+  margin: 10px auto 0;
+  padding: 0 12px;
+  max-width: 900px;
+  text-align: center;
+  color: #fff;
+  font-size: clamp(14px, 2.7vw, 18px);
+  line-height: 1.5;
+}
+
+/* Section headings inside .card */
 section.card h2 {
   margin-top: 0;
   color: black;
@@ -140,7 +153,22 @@ section.card h2 {
   margin-bottom: 6px;
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; }
+
+/* inline founder name + insta */
+.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; display:inline-flex; align-items:center; gap:8px; }
+.founder-insta-inline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+.founder-insta-inline:hover { color: #ffcc00; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
 
 /* GLOBAL SLIDER RULES */
@@ -190,7 +218,7 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
-  /* keep founder overlay static above image (mobile) - already set */
+  .founder-insta-inline { width:24px; height:24px; font-size:14px; }
 }
 
 /* DESKTOP / LARGE SCREENS */
@@ -211,21 +239,18 @@ section.card h2 {
   .instructor-img-centered { width:100%; max-width:900px; margin:0 auto; }
   .slider-container { max-width: 920px; }
 }
-/* === PATCH: make specific sections black bg + white text (drop into the end of style.css) === */
 
-/* Target the exact section IDs used in your HTML */
+/* === original patch: several sections black bg + white text (kept) === */
 #classes,
 #rules,
 #registration,
-#our-services,   /* matches <section id="our-services"> in your HTML */
+#our-services,
 #contact,
 #location,
 #about {
-  background-color: #000; /* black background */
-  color: #fff;            /* white text */
+  background-color: #000;
+  color: #fff;
 }
-
-/* Ensure headings inside those sections are white */
 #classes h2,
 #rules h2,
 #registration h2,
@@ -235,8 +260,6 @@ section.card h2 {
 #about h2 {
   color: #fff;
 }
-
-/* Links inside those sections should be visible (white) */
 #classes a,
 #rules a,
 #registration a,
@@ -245,10 +268,8 @@ section.card h2 {
 #location a,
 #about a {
   color: #fff;
-  text-decoration: underline; /* optional: keeps links obvious */
+  text-decoration: underline;
 }
-
-/* Make sure list items inherit the white color */
 #classes li,
 #rules li,
 #registration li,
@@ -258,9 +279,6 @@ section.card h2 {
 #about li {
   color: inherit;
 }
-
-/* If some rules from earlier CSS still override colors (rare),
-   this rule uses the ID + element specificity to override them. */
 #classes * ,
 #rules * ,
 #registration * ,
@@ -271,43 +289,76 @@ section.card h2 {
   color: inherit !important;
 }
 
-/* IMPORTANT: this patch does NOT touch .split-title or header alignment,
-   so "KRYPTON DANCE STUDIO BAJAGOLI" positioning remains exactly as before. */
-#founder,
-#our-studio,
-#achievements,
-#gallery {
-  background-color: #000;
+/* === CONTACT override: dark grey + stacked icons === */
+#contact {
+  background-color: #2b2b2b; /* dark grey */
   color: #fff;
 }
-
-#founder h2,
-#our-studio h2,
-#achievements h2,
-#gallery h2 {
-  color: #fff;
+#contact .social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+#contact .social-icons a {
+  color: #fff !important;
+  font-size: 28px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+#contact .social-icons a:hover {
+  color: #ffcc00 !important;
+  transform: scale(1.04);
 }
 
-#founder a,
-#our-studio a,
-#achievements a,
-#gallery a {
-  color: #fff;
-  text-decoration: underline;
+/* === CLASSES / Dance Styles: force white background + grid (title above each image) === */
+#classes {
+  background-color: #fff !important; /* ensure white for this section */
+  color: #000 !important;
+}
+/* layout: 2 per row, last centered */
+#classes .style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 12px;
+}
+#classes .style-card {
+  text-align: center;
+  max-width: 420px;
+}
+#classes .style-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 0.6px;
+  color: #111;
+}
+#classes .style-card img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+/* center the last card when odd number */
+#classes .style-grid .style-card:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  max-width: 520px;
 }
 
-#founder li,
-#our-studio li,
-#achievements li,
-#gallery li {
-  color: inherit;
+/* responsive tweak: single column on small screens */
+@media (max-width: 600px) {
+  #classes .style-grid {
+    grid-template-columns: 1fr;
+  }
+  #classes .style-grid .style-card:last-child {
+    grid-column: 1;
+    max-width: 100%;
+  }
 }
-
-.slider-container {
-  background: transparent;
-}
-
-
-
-
-
