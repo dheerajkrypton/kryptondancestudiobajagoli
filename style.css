@@ -74,6 +74,7 @@ header.site-header {
   place-items: center;
   position: relative;
   padding: 14px 12px;
+  text-align: center;
 }
 .studio-title::before {
   content: "";
@@ -90,7 +91,6 @@ header.site-header {
   font-style: italic;
   letter-spacing: 2px;
   line-height: 1.05;
-  text-align: center;
   position: relative;
   z-index: 1;
   text-transform: uppercase;
@@ -100,16 +100,14 @@ header.site-header {
 }
 .split-title span { display:block; }
 
-/* HERO description */
 .studio-description {
   margin-top: 12px;
-  color: #fff;
-  font-size: clamp(16px, 3vw, 22px);
-  text-align: center;
-  max-width: 900px;
-  z-index: 1;
+  font-size: 16px;
+  color: white;
   position: relative;
-  line-height: 1.4;
+  z-index: 1;
+  max-width: 900px;
+  text-align: center;
 }
 
 /* Section headings */
@@ -141,7 +139,7 @@ section.card h2 {
 #founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
-  position: static;
+  position: static; /* mobile-first: static so text appears above image */
   transform: none;
   left: auto;
   top: auto;
@@ -152,9 +150,9 @@ section.card h2 {
   margin-bottom: 6px;
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; }
+.founder-name a { color: white; margin-left: 8px; font-size: 22px; vertical-align: middle; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
-.founder-name a { color: #fff; font-size: 20px; display:inline-block; text-decoration:none; }
 
 /* GLOBAL SLIDER RULES */
 .slider-container {
@@ -192,6 +190,40 @@ section.card h2 {
 .left-arrow { left: 8px; }
 .right-arrow { right: 8px; }
 
+/* Dance styles grid */
+.style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+}
+.style-card {
+  text-align: center;
+}
+.style-card img {
+  width: 100%;
+  height: auto;
+  max-width: 250px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+/* Contact section */
+.contact-icons {
+  background-color: #333;
+  color: white;
+}
+.contact-icons .icon-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  font-size: 28px;
+  margin-top: 12px;
+}
+.contact-icons .icon-links a { color: white; text-decoration: none; }
+.contact-icons .icon-links a:hover { color: #ff4500; }
+
 /* Other small utilities */
 .achievement-item { margin-bottom: 20px; text-align: center; }
 .centered-list { list-style:none; padding:0; margin:0 auto; max-width:320px; font-weight:700; text-align:center; }
@@ -208,6 +240,7 @@ section.card h2 {
 /* DESKTOP / LARGE SCREENS */
 @media (min-width: 768px) {
   .card { padding: 24px 32px; }
+  /* Use overlay style on desktop for founder */
   #founder { display: block; }
   .founder-text-overlay {
     position: absolute;
@@ -221,116 +254,23 @@ section.card h2 {
   }
   .instructor-img-centered { width:100%; max-width:900px; margin:0 auto; }
   .slider-container { max-width: 920px; }
+  .style-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* === PATCH: make specific sections black bg + white text === */
+/* Sections with black background (other than hero) */
 #rules,
 #registration,
-#our-services {
-  background-color: #000; 
-  color: #fff;            
+#our-services,
+#location {
+  background-color: #000;
+  color: #fff;
 }
-
 #rules h2,
 #registration h2,
-#our-services h2 {
-  color: #fff;
-}
-
+#our-services h2,
+#location h2 { color: #fff; }
 #rules a,
 #registration a,
-#our-services a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-#rules li,
-#registration li,
-#our-services li {
-  color: inherit;
-}
-
-#rules *, #registration *, #our-services * {
-  color: inherit !important;
-}
-
-/* === CONTACT SECTION DARK GREY + SOCIAL ICONS === */
-#contact {
-  background-color: #1f1f1f;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-.contact-icons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.contact-icons a {
-  color: #fff;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-}
-
-.contact-icons a:hover { color: #ff4500; }
-
-/* === CLASSES / Dance Styles: white background + grid for 2-per-row + last centered === */
-#classes {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-
-#classes .style-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  justify-items: center;
-  align-items: start;
-  margin-top: 12px;
-}
-
-#classes .style-card {
-  text-align: center;
-  max-width: 200px; /* reduced for 2-per-row */
-}
-
-#classes .style-card h3 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  letter-spacing: 0.6px;
-  color: #111;
-}
-
-#classes .style-card img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-/* last card centered */
-#classes .style-grid .style-card:last-child {
-  grid-column: 1 / -1;
-  justify-self: center;
-}
-
-/* MOBILE: single column under 500px */
-@media (max-width: 500px) {
-  #classes .style-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-  #classes .style-grid .style-card:last-child {
-    grid-column: 1;
-    max-width: 100%;
-  }
-}
+#our-services a,
+#location a { color: #fff; text-decoration: underline; }
+#rules *, #registration *, #our-services *, #location * { color: inherit !important; }
