@@ -244,3 +244,14 @@ section.card h2 {
   }
   .slider-container { max-width: 920px; }
 }
+/* Force all social icons inside founder and contact sections to be white */
+#founder .icon-link,
+#contact .icon-link {
+  color: #fff !important; /* !important ensures it overrides default blue */
+}
+
+#founder .icon-link:hover,
+#contact .icon-link:hover {
+  color: #fff !important; /* keep white on hover */
+  opacity: 0.8; /* optional subtle hover effect */
+}
