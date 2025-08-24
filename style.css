@@ -141,7 +141,7 @@ section.card h2 {
 #founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
-  position: static; /* mobile-first: static so text appears above image */
+  position: static;
   transform: none;
   left: auto;
   top: auto;
@@ -154,8 +154,6 @@ section.card h2 {
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
 .founder-name { font-size: 20px; margin: 0 0 4px; color: black; font-style: italic; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
-
-/* Founder Insta icon */
 .founder-name a { color: #fff; font-size: 20px; display:inline-block; text-decoration:none; }
 
 /* GLOBAL SLIDER RULES */
@@ -205,13 +203,11 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
-  /* keep founder overlay static above image (mobile) - already set */
 }
 
 /* DESKTOP / LARGE SCREENS */
 @media (min-width: 768px) {
   .card { padding: 24px 32px; }
-  /* Use overlay style on desktop for founder */
   #founder { display: block; }
   .founder-text-overlay {
     position: absolute;
@@ -286,15 +282,15 @@ section.card h2 {
 
 .contact-icons a:hover { color: #ff4500; }
 
-/* === CLASSES / Dance Styles: force white background + grid (title above each image) === */
+/* === CLASSES / Dance Styles: white background + grid for 2-per-row + last centered === */
 #classes {
-  background-color: #fff !important; /* ensure white for this section */
+  background-color: #fff !important;
   color: #000 !important;
 }
 
 #classes .style-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   justify-items: center;
   align-items: start;
@@ -303,7 +299,7 @@ section.card h2 {
 
 #classes .style-card {
   text-align: center;
-  max-width: 260px;
+  max-width: 200px; /* reduced for 2-per-row */
 }
 
 #classes .style-card h3 {
@@ -315,20 +311,23 @@ section.card h2 {
 
 #classes .style-card img {
   width: 100%;
-  max-width: 260px;
+  max-width: 200px;
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
+/* last card centered */
 #classes .style-grid .style-card:last-child {
   grid-column: 1 / -1;
   justify-self: center;
 }
 
-@media (max-width: 600px) {
+/* MOBILE: single column under 500px */
+@media (max-width: 500px) {
   #classes .style-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
   }
   #classes .style-grid .style-card:last-child {
     grid-column: 1;
