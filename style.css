@@ -7,7 +7,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #333; /* all sections grey */
+  background: #333; 
   color: #fff;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
@@ -109,11 +109,10 @@ header.site-header {
 
 /* Card base */
 .card {
-  background: #444; /* grey background */
+  background: #444; 
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
   color: white;
   text-align: center;
   position: relative;
@@ -138,17 +137,18 @@ header.site-header {
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
 .founder-name { font-size: 20px; margin: 0; font-style: italic; display: flex; justify-content: center; align-items: center; gap: 8px; }
 .personal-insta i { color: #fff; font-size: 20px; }
+.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
 
 /* Dance styles grid */
 .dance-styles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 16px;
   justify-items: center;
   align-items: center;
 }
 .dance-style-item h3 { margin-bottom: 8px; }
-.dance-style-item img { width: 100%; max-width: 180px; border-radius: 6px; }
+.dance-style-item img { width: 100%; max-width: 160px; border-radius: 6px; }
 
 /* GLOBAL SLIDER RULES */
 .slider-container {
@@ -185,9 +185,6 @@ header.site-header {
 .slider-arrow:hover { background-color: rgba(255, 69, 0, 0.85); }
 .left-arrow { left: 8px; }
 .right-arrow { right: 8px; }
-
-/* Lists */
-.centered-list { list-style:none; padding:0; margin:0 auto; max-width:320px; font-weight:700; text-align:center; }
 
 /* CONTACT SECTION */
 #contact .social-icons {
