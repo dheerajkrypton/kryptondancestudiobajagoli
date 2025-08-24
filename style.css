@@ -3,12 +3,14 @@
    =========================== */
 
 * { box-sizing: border-box; }
+
+/* ===== BODY / MAIN BACKGROUND ===== */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #111; /* greyish dark background */
-  color: #fff; /* all text white */
+  background: #fff; /* changed from #111 to white */
+  color: #000; /* text black for readability on white background */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -35,8 +37,8 @@ header.site-header {
   cursor: pointer;
   line-height: 1;
   padding: 6px 8px;
-  color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  color: #000; /* changed to black for visibility */
+  text-shadow: none;
 }
 
 /* Side menu */
@@ -116,17 +118,17 @@ section.card h2 {
   padding-bottom: 6px;
   letter-spacing: 1.5px;
   text-align: center;
-  color: #fff;
+  color: #000; /* changed to black for readability */
 }
 
 /* Card base */
 .card {
-  background: #222;
+  background: #f2f2f2; /* changed from #222 to light grey for contrast */
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
-  color: #fff;
+  color: #000; /* text black */
   text-align: center;
   position: relative;
   overflow: visible;
@@ -134,8 +136,17 @@ section.card h2 {
   max-width: 1100px;
 }
 
-/* Founder */
-#founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+/* ===== FOUNDER SECTION ===== */
+#founder {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: #d9d9d9; /* light grey background */
+  color: #000; /* text black */
+}
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
   position: static;
@@ -148,13 +159,13 @@ section.card h2 {
   padding: 0;
   margin-bottom: 6px;
 }
-.founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #fff; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: #fff; font-style: italic; display: flex; justify-content: center; align-items: center; gap:8px; }
-.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
+.founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #000; }
+.founder-name { font-size: 20px; margin: 0 0 4px; color: #000; font-style: italic; display: flex; justify-content: center; align-items: center; gap:8px; }
+.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; color: #000; }
 
 /* Social icons */
-.icon-link { color: #fff; text-decoration: none; font-size: 20px; margin-left: 6px; }
-.icon-link:hover { color: #fff; opacity: 0.8; }
+.icon-link { color: #000; text-decoration: none; font-size: 20px; margin-left: 6px; }
+.icon-link:hover { color: #000; opacity: 0.8; }
 
 /* Dance Styles Grid */
 .dance-styles-grid {
@@ -207,12 +218,17 @@ section.card h2 {
 .left-arrow { left: 8px; }
 .right-arrow { right: 8px; }
 
+/* ===== CONTACT SECTION ===== */
+#contact {
+  background: #bfbfbf; /* medium grey */
+  color: #000; /* black text */
+}
+
 /* Contact Icons */
 .contact-icons-row {
   display:flex;
   justify-content:center;
   gap:16px;
-  margin:8px 0;
 }
 
 /* Other small utilities */
@@ -239,19 +255,8 @@ section.card h2 {
     transform: translateX(-50%);
     width: 90%;
     max-width: 900px;
-    text-shadow: 0 0 3px rgba(255,255,255,0.7);
+    text-shadow: 0 0 3px rgba(0,0,0,0.7);
     background: transparent;
   }
   .slider-container { max-width: 920px; }
-}
-/* Force all social icons inside founder and contact sections to be white */
-#founder .icon-link,
-#contact .icon-link {
-  color: #fff !important; /* !important ensures it overrides default blue */
-}
-
-#founder .icon-link:hover,
-#contact .icon-link:hover {
-  color: #fff !important; /* keep white on hover */
-  opacity: 0.8; /* optional subtle hover effect */
 }
