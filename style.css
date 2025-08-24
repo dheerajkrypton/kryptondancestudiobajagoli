@@ -1,162 +1,53 @@
-/* ===========================
-   style.css (mobile-first)
-   =========================== */
-
-* { box-sizing: border-box; }
-
-/* ===== BODY / MAIN BACKGROUND ===== */
+/* MAIN PAGE BACKGROUND */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #fff; /* white */
   color: #000;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Header */
-header.site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 16px;
-  background: transparent;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 3000;
-}
-.logo-container { max-width: 160px; margin: 0; }
-.logo { height: 40px; width: auto; display: block; filter: drop-shadow(0 1px 3px rgba(0,0,0,0.5)); }
-.menu-icon {
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  line-height: 1;
-  padding: 6px 8px;
-  color: #000;
-  text-shadow: none;
-}
-
-/* Side menu */
-.side-menu {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: black;
-  overflow-x: hidden;
-  transition: width 0.28s ease;
-  padding-top: 60px;
-  z-index: 4000;
-}
-.side-menu a {
-  padding: 12px 22px;
-  text-decoration: none;
-  font-size: 18px;
-  color: white;
-  display: block;
-  transition: background-color 0.2s;
-}
-.side-menu a:hover { background-color: #333; }
-.side-menu .close-btn {
-  position: absolute; top:8px; left:14px; font-size:30px; background:none; border:none; color:white; cursor:pointer;
-}
-.side-menu.open, .side-menu[aria-hidden="false"] { width: 260px; }
-
-/* HERO */
-.studio-title {
-  background: url("images/titlebg.jpg") center center / cover no-repeat;
-  min-height: 70vh;
-  display: grid;
-  place-items: center;
-  position: relative;
-  padding: 14px 12px;
-  color: #fff;
-}
-.studio-title::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.45);
-  z-index: 0;
-}
-.split-title {
   margin: 0;
-  font-size: clamp(32px, 8vw, 84px);
-  font-weight: 900;
-  font-style: italic;
-  letter-spacing: 2px;
-  line-height: 1.05;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  text-transform: uppercase;
-  -webkit-text-stroke: 2px black;
-  paint-order: stroke fill;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
-}
-.split-title span { display:block; }
-
-.studio-description {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 16px;
-  max-width: 800px;
-  z-index: 1;
-  position: relative;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* HERO text stays white */
+/* HERO TITLE/DESCRIPTION */
 .studio-title .split-title,
 .studio-title .studio-description {
-  color: #fff !important;
+  color: #fff !important; /* keep white */
 }
 
-/* Section headings */
-section.card h2 {
-  margin-top: 0;
-  border-bottom: 3px solid #ff4500;
-  padding-bottom: 6px;
-  letter-spacing: 1.5px;
-  text-align: center;
-  color: #000;
-}
-
-/* ===== SECTION BACKGROUNDS ===== */
-
-/* Founder Section */
+/* FOUNDER SECTION */
 #founder {
   background-color: #d9d9d9 !important; /* light grey */
   color: #000;
 }
 
-/* Contact Section */
+/* CONTACT SECTION */
 #contact {
-  background-color: #d9d9d9 !important; /* same light grey */
+  background-color: #d9d9d9 !important; /* same grey as other sections */
   color: #000;
 }
 
-/* Dance Styles Section */
+#contact i {
+  font-size: 1.5rem; /* bigger icons */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* DANCE STYLES SECTION */
 #classes {
   background-color: #fff !important; /* white */
   color: #000;
 }
 
-/* Class Timings List inside Dance Styles – remove bullets */
+/* CLASS TIMINGS LIST INSIDE DANCE STYLES */
 #classes .centered-list {
   background-color: #d9d9d9 !important; /* light grey */
   color: #000;
   padding: 12px;
   border-radius: 8px;
-  list-style: none; /* removes bullets */
+  list-style: none; /* removes bullet points */
+  margin: 0;
 }
 
-/* All other sections */
+/* ALL OTHER SECTIONS (Achievements, Gallery, Registration, Services, Rules, Location) */
 #our-studio,
 #achievements,
 #gallery,
@@ -168,107 +59,11 @@ section.card h2 {
   color: #000;
 }
 
-/* ===== CARD BASE ===== */
-.card {
-  padding: 20px;
-  margin: 18px auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
-  text-align: center;
-  position: relative;
-  overflow: visible;
-  scroll-margin-top: 80px;
-  max-width: 1100px;
-}
-
-/* ===== DANCE STYLE IMAGES REDUCED SIZE ===== */
+/* DANCE STYLES IMAGES SIZE */
 #classes .dance-style-item img {
-  max-width: 80%;
+  max-width: 80%; /* smaller images */
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 8px;
-}
-
-/* Founder Section Details */
-.instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
-.founder-text-overlay {
-  position: static;
-  transform: none;
-  left: auto;
-  top: auto;
-  width: auto;
-  background: transparent;
-  text-shadow: none;
-  padding: 0;
-  margin-bottom: 6px;
-}
-.founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #000; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: #000; font-style: italic; display: flex; justify-content: center; align-items: center; gap:8px; }
-.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; color: #000; }
-
-/* Social icons */
-.icon-link { color: #000; text-decoration: none; font-size: 20px; margin-left: 6px; }
-.icon-link:hover { color: #000; opacity: 0.8; }
-
-/* GLOBAL SLIDER RULES */
-.slider-container {
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-  margin: 18px auto;
-  overflow: hidden;
-  border-radius: 8px;
-  background: transparent;
-}
-.slider-container .slide { display: none; text-align: center; }
-.slider-container .slide.active { display: block; }
-.slider-container img, .slider-container video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-}
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 69, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 22px;
-  padding: 8px 10px;
-  cursor: pointer;
-  border-radius: 6px;
-  z-index: 10;
-}
-.slider-arrow:hover { background-color: rgba(255, 69, 0, 0.85); }
-.left-arrow { left: 8px; }
-.right-arrow { right: 8px; }
-
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 767px) {
-  .card { margin: 12px 12px; padding: 16px; }
-  .slider-container { max-width: 100%; margin: 12px auto; border-radius: 10px; }
-  .slider-arrow { font-size: 20px; padding: 7px 9px; }
-  .left-arrow { left: 6px; }
-  .right-arrow { right: 6px; }
-}
-
-/* DESKTOP / LARGE SCREENS */
-@media (min-width: 768px) {
-  .card { padding: 24px 32px; }
-  #founder { display: block; }
-  .founder-text-overlay {
-    position: absolute;
-    left: 50%;
-    top: 24px;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    text-shadow: 0 0 3px rgba(0,0,0,0.7);
-    background: transparent;
-  }
-  .slider-container { max-width: 920px; }
 }
