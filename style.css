@@ -7,8 +7,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #333;
-  color: #fff;
+  background: #333; /* dark grey background */
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -46,7 +46,7 @@ header.site-header {
   position: fixed;
   top: 0;
   right: 0;
-  background-color: #222;
+  background-color: #000;
   overflow-x: hidden;
   transition: width 0.28s ease;
   padding-top: 60px;
@@ -60,7 +60,7 @@ header.site-header {
   display: block;
   transition: background-color 0.2s;
 }
-.side-menu a:hover { background-color: #555; }
+.side-menu a:hover { background-color: #333; }
 .side-menu .close-btn {
   position:absolute; top:8px; left:14px; font-size:30px; background:none; border:none; color:white; cursor:pointer;
 }
@@ -84,7 +84,7 @@ header.site-header {
 }
 .split-title {
   margin: 0;
-  color: #fff;
+  color: white;
   font-size: clamp(32px, 8vw, 84px);
   font-weight: 900;
   font-style: italic;
@@ -99,35 +99,24 @@ header.site-header {
   text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 .split-title span { display:block; }
-
-/* About description below title */
 .studio-description {
-  color: #fff;
-  max-width: 900px;
-  text-align: center;
   margin-top: 12px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-/* Section headings */
-section.card h2 {
-  margin-top: 0;
-  color: #fff;
-  border-bottom: 3px solid #ff4500;
-  padding-bottom: 6px;
-  letter-spacing: 1.5px;
   text-align: center;
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 800px;
+  z-index:1;
+  position: relative;
 }
 
 /* Card base */
 .card {
-  background: #555;
+  background: #444; /* grey background */
   padding: 20px;
   margin: 18px auto;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  color: white;
   text-align: center;
   position: relative;
   overflow: visible;
@@ -135,28 +124,42 @@ section.card h2 {
   max-width: 1100px;
 }
 
+/* Section headings */
+section.card h2 {
+  margin-top: 0;
+  color: white;
+  border-bottom: 3px solid #ff4500;
+  padding-bottom: 6px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
 /* Founder */
 #founder { position: relative; overflow: visible; display: flex; flex-direction: column; align-items: center; gap: 12px; }
 .instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
 .founder-text-overlay {
-  text-align: center;
+  position: static;
+  transform: none;
+  left: auto;
+  top: auto;
+  width: auto;
+  background: transparent;
+  text-shadow: none;
+  padding: 0;
+  margin-bottom: 6px;
 }
 .founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #ff4500; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: #fff; font-style: italic; text-align: center; }
-.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
-
-/* Social icons */
-.social-icons {
+.founder-name {
+  font-size: 20px;
+  margin: 0 0 4px;
+  font-style: italic;
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-top: 8px;
+  align-items: center;
+  gap: 8px;
 }
-.social-icons a {
-  color: #fff;
-  font-size: 24px;
-  display: inline-block;
-}
+.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; }
+.founder-name .social-icons i { color: white; font-size: 20px; }
 
 /* GLOBAL SLIDER RULES */
 .slider-container {
@@ -196,42 +199,47 @@ section.card h2 {
 
 /* Dance Styles Grid */
 .dance-styles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 12px;
-  justify-items: center;
-  align-items: center;
   margin-top: 12px;
+}
+.dance-style-item {
+  flex: 1 1 calc(50% - 12px);
+  max-width: 200px;
+  text-align: center;
 }
 .dance-style-item img {
   width: 100%;
-  max-width: 150px;
-  height: auto;
   border-radius: 6px;
+  display: block;
+  margin: 4px auto;
+}
+@media (max-width: 480px) {
+  .dance-style-item { flex: 1 1 100%; max-width: 100%; }
 }
 
-/* Contact Section */
-#contact {
-  background: #444;
-  color: #fff;
+/* Social Icons */
+.social-icons a {
+  color: white;
+  margin: 0 6px;
+  font-size: 22px;
+  text-decoration: none;
 }
+.social-icons a:hover { color: #ff4500; }
+
+/* Contact Section icons horizontal */
 #contact .social-icons {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 12px;
+  margin: 8px 0;
 }
 
-/* Registration link white */
-#registration a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Other small utilities */
-.achievement-item { margin-bottom: 20px; text-align: center; }
+/* Other utilities */
 .centered-list { list-style:none; padding:0; margin:0 auto; max-width:320px; font-weight:700; text-align:center; }
+.white-link { color: white; text-decoration: underline; }
 
 /* MOBILE ADJUSTMENTS */
 @media (max-width: 767px) {
@@ -240,13 +248,22 @@ section.card h2 {
   .slider-arrow { font-size: 20px; padding: 7px 9px; }
   .left-arrow { left: 6px; }
   .right-arrow { right: 6px; }
-  .dance-styles-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
 }
 
 /* DESKTOP / LARGE SCREENS */
 @media (min-width: 768px) {
   .card { padding: 24px 32px; }
+  /* Overlay style on desktop for founder */
   #founder { display: block; }
+  .founder-text-overlay {
+    position: absolute;
+    left: 50%;
+    top: 24px;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 900px;
+    text-shadow: 0 0 3px rgba(255,255,255,0.7);
+    background: transparent;
+  }
   .slider-container { max-width: 920px; }
-  .dance-style-item img { max-width: 180px; }
 }
