@@ -263,3 +263,19 @@ section.card h2 {
   }
   .slider-container { max-width: 920px; }
 }
+/* Make all social media icons black */
+.icon-link i {
+  color: black !important;
+}
+
+/* Make all normal links black (instead of blue + underline) */
+a {
+  color: black;
+  text-decoration: none; /* removes underline */
+}
+
+/* If you want links to turn grey when hovered */
+a:hover {
+  color: grey;
+}
+
