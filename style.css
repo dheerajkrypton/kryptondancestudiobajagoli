@@ -131,7 +131,6 @@ section.card h2 {
 
 /* ===== SECTION BACKGROUNDS ===== */
 #founder,
-#contact,
 #our-studio,
 #achievements,
 #gallery,
@@ -151,10 +150,10 @@ section.card h2 {
 
 /* Class Timings List inside Dance Styles – remove bullets */
 #classes .centered-list {
-  list-style: none; /* removes bullet points */
+  list-style: none;
   margin: 0;
   padding: 12px;
-  background-color: #d9d9d9; /* grey for the list */
+  background-color: #d9d9d9;
   border-radius: 8px;
 }
 
@@ -173,7 +172,7 @@ section.card h2 {
 
 /* ===== DANCE STYLE IMAGES REDUCED SIZE ===== */
 #classes .dance-style-item img {
-  max-width: 80%; /* smaller images */
+  max-width: 80%;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -181,87 +180,4 @@ section.card h2 {
 }
 
 /* Founder Section Details */
-.instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px; margin:0 auto; }
-.founder-text-overlay {
-  position: static;
-  transform: none;
-  left: auto;
-  top: auto;
-  width: auto;
-  background: transparent;
-  text-shadow: none;
-  padding: 0;
-  margin-bottom: 6px;
-}
-.founder-text-overlay h2 { font-size: 22px; margin: 0 0 6px; color: #000; }
-.founder-name { font-size: 20px; margin: 0 0 4px; color: #000; font-style: italic; display: flex; justify-content: center; align-items: center; gap:8px; }
-.founder-desc { font-size: 14px; margin: 0; font-weight: 600; font-style: italic; color: #000; }
-
-/* Social icons in contact – increased size only */
-#contact .icon-link i {
-  font-size: 1.8rem; /* slightly bigger icons */
-}
-
-/* GLOBAL SLIDER RULES */
-.slider-container {
-  position: relative;
-  max-width: 600px;
-  width: 100%;
-  margin: 18px auto;
-  overflow: hidden;
-  border-radius: 8px;
-  background: transparent;
-}
-.slider-container .slide { display: none; text-align: center; }
-.slider-container .slide.active { display: block; }
-.slider-container img, .slider-container video {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-  display: block;
-}
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(255, 69, 0, 0.5);
-  border: none;
-  color: white;
-  font-size: 22px;
-  padding: 8px 10px;
-  cursor: pointer;
-  border-radius: 6px;
-  z-index: 10;
-}
-.slider-arrow:hover { background-color: rgba(255, 69, 0, 0.85); }
-.left-arrow { left: 8px; }
-.right-arrow { right: 8px; }
-
-/* MOBILE ADJUSTMENTS */
-@media (max-width: 767px) {
-  .card { margin: 12px 12px; padding: 16px; }
-  .slider-container { max-width: 100%; margin: 12px auto; border-radius: 10px; }
-  .slider-arrow { font-size: 20px; padding: 7px 9px; }
-  .left-arrow { left: 6px; }
-  .right-arrow { right: 6px; }
-}
-
-/* DESKTOP / LARGE SCREENS */
-@media (min-width: 768px) {
-  .card { padding: 24px 32px; }
-  #founder { display: block; }
-  .founder-text-overlay {
-    position: absolute;
-    left: 50%;
-    top: 24px;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    text-shadow: 0 0 3px rgba(0,0,0,0.7);
-    background: transparent;
-  }
-  .slider-container { max-width: 920px; }
-}
-
-
+.instructor-img-centered { display:block; width:100%; max-width:900px; height:auto; border-radius:8px;
