@@ -277,5 +277,14 @@ a {
 /* If you want links to turn grey when hovered */
 a:hover {
   color: grey;
+} 
+.contact-icons-row {
+  display: flex;              /* makes all icons sit in one row */
+  justify-content: center;    /* centers them horizontally */
+  align-items: center;        /* aligns vertically */
+  gap: 20px;                  /* space between each icon */
+  flex-wrap: wrap;            /* important: lets icons wrap to next line on small screens */
 }
+
+
 
