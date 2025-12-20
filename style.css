@@ -327,6 +327,13 @@ a:hover {
   }
 
 }
+.hamburger {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+}
+
 
 
 
