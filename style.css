@@ -306,6 +306,29 @@ a:hover {
   font-size: 20px;
   letter-spacing: 3px;
 }
+/* Applies to both KRYPTON and bottom text */
+.krypton,
+.bottom-line span {
+  color: white;
+  -webkit-text-stroke: 2px black; /* outline */
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+
+  .krypton {
+    font-size: 48px;     /* smaller but proportional */
+    letter-spacing: 4px;
+  }
+
+  .bottom-line {
+    gap: 12px;           /* tighter spacing */
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+}
+
+
 
 
 
