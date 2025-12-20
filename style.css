@@ -285,6 +285,24 @@ a:hover {
   gap: 20px;                  /* space between each icon */
   flex-wrap: wrap;            /* important: lets icons wrap to next line on small screens */
 }
+.studio-name {
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+}
 
+/* KRYPTON */
+.krypton {
+  font-size: 72px;
+  letter-spacing: 6px;
+  line-height: 1;
+  margin-bottom: 10px;
+}
 
-
+/* DANCE STUDIO BAJAGOLI LINE */
+.bottom-line {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  font-size: 20px;
+  letter-spacing: 3px;
+}
