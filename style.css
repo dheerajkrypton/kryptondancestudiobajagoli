@@ -357,6 +357,28 @@ a:hover {
     font-size: 16px;
   }
 }
+/* === MAKE BOTH TITLES WIDER === */
+
+.krypton {
+  letter-spacing: 8px;      /* wider KRYPTON */
+  color: #ffffff;           /* pure white */
+}
+
+.bottom-line span {
+  letter-spacing: 6px;      /* wider bottom text */
+  color: #ffffff;           /* pure white */
+}
+@media (max-width: 768px) {
+  .krypton {
+    letter-spacing: 5px;
+  }
+
+  .bottom-line span {
+    letter-spacing: 3px;
+  }
+}
+
+
 
 
 
