@@ -388,6 +388,13 @@ a:hover {
 }
 
 
+/* ===== USE BEBAS NEUE FOR STUDIO TITLE ===== */
+
+.krypton,
+.bottom-line span {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
 
 
 
