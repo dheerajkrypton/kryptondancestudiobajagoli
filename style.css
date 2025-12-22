@@ -360,12 +360,12 @@ a:hover {
 /* === MAKE BOTH TITLES WIDER === */
 
 .krypton {
-  letter-spacing: 8px;      /* wider KRYPTON */
+  letter-spacing: 12px;      /* wider KRYPTON */
   color: #ffffff;           /* pure white */
 }
 
 .bottom-line span {
-  letter-spacing: 6px;      /* wider bottom text */
+  letter-spacing: 9px;      /* wider bottom text */
   color: #ffffff;           /* pure white */
 }
 @media (max-width: 768px) {
@@ -377,6 +377,7 @@ a:hover {
     letter-spacing: 3px;
   }
 }
+
 
 
 
