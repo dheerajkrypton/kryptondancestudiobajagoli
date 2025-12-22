@@ -377,6 +377,17 @@ a:hover {
     letter-spacing: 3px;
   }
 }
+/* ===== FORCE PURE BRIGHT WHITE TITLE ===== */
+.krypton,
+.bottom-line span {
+  color: #ffffff !important;          /* pure white */
+  -webkit-text-stroke-color: #000;    /* solid black outline */
+  -webkit-text-stroke-width: 3px;     /* clean outline */
+  text-shadow: none !important;       /* removes dulling */
+  paint-order: stroke fill;           /* stroke behind text */
+}
+
+
 
 
 
