@@ -99,4 +99,12 @@ function closeEnquiry() {
   if (overlay) overlay.style.display = 'none';
 }
 
+function openEnquiry() {
+  document.getElementById('enquiryOverlay').style.display = 'flex';
+}
+
+function closeEnquiry() {
+  document.getElementById('enquiryOverlay').style.display = 'none';
+}
+
 
