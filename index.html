@@ -54,36 +54,45 @@
     </p>
   </section>
 
-  <!-- ENQUIRY CARD -->
-<div class="enquiry-card">
-  <h3>ENQUIRY FORM</h3>
+<!-- ENQUIRY CARD -->
+<div class="enquiry-wrapper">
 
-  <form class="enquiry-form">
-    
-    <label>Full name*</label>
-    <input type="text" placeholder="Enter here" required>
+  <!-- Small clickable card -->
+  <div class="enquiry-trigger" onclick="toggleEnquiry()">
+    ENQUIRY FORM
+  </div>
 
-    <label>Email Address*</label>
-    <input type="email" placeholder="Enter here" required>
+  <!-- Hidden Form -->
+  <div class="enquiry-card" id="enquiryCard">
+    <form class="enquiry-form">
+      
+      <label>Full name*</label>
+      <input type="text" placeholder="Enter here" required>
 
-    <label>Contact*</label>
-    <input type="tel" placeholder="Enter here" required>
+      <label>Email Address*</label>
+      <input type="email" placeholder="Enter here" required>
 
-    <label>Choose our service*</label>
-    <select required>
-      <option value="">Choose</option>
-      <option>Enroll for class</option>
-      <option>Book us for event</option>
-    </select>
+      <label>Contact*</label>
+      <input type="tel" placeholder="Enter here" required>
 
-    <label>Comments / Questions*</label>
-    <textarea placeholder="Type here" rows="4" required></textarea>
+      <label>Choose our service*</label>
+      <select required>
+        <option value="">Choose</option>
+        <option>Enroll for class</option>
+        <option>Book us for event</option>
+      </select>
 
-    <button type="submit">SUBMIT</button>
+      <label>Comments / Questions*</label>
+      <textarea placeholder="Type here" rows="4" required></textarea>
 
-  </form>
+      <button type="submit">SUBMIT</button>
+
+    </form>
+  </div>
+
 </div>
 
+  
 
   <main>
 
@@ -302,6 +311,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
