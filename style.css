@@ -395,29 +395,39 @@ a:hover {
   font-family: 'Bebas Neue', sans-serif;
 }
 
-/* =====================
-   ENQUIRY FORM CARD
-   ===================== */
+/* ===== ENQUIRY TOGGLE CARD ===== */
 
+.enquiry-wrapper {
+  margin-top: 20px;
+  margin-left: 12px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Small yellow card */
+.enquiry-trigger {
+  background: #ffeb3b;
+  color: #000;
+  padding: 10px 16px;
+  width: fit-content;
+  font-weight: 800;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* Hidden form card */
 .enquiry-card {
-  background: #ffeb3b;              /* yellow */
+  display: none;
+  margin-top: 12px;
+  background: #ffeb3b;
   width: 280px;
   padding: 16px;
   border-radius: 10px;
-  position: relative;
-  margin-top: 20px;
-  margin-left: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  z-index: 2;
 }
 
-.enquiry-card h3 {
-  margin: 0 0 12px;
-  font-size: 16px;
-  font-weight: 800;
-  text-align: left;
-}
-
+/* Form styles */
 .enquiry-form {
   display: flex;
   flex-direction: column;
@@ -437,18 +447,15 @@ a:hover {
   font-size: 13px;
   border-radius: 5px;
   border: 1px solid #333;
-  outline: none;
 }
 
-.enquiry-form textarea {
-  resize: none;
-}
+.enquiry-form textarea { resize: none; }
 
 .enquiry-form button {
   align-self: flex-start;
   margin-top: 8px;
-  background: #2e7d32;     /* green */
-  color: #fff;
+  background: #2e7d32;
+  color: white;
   border: none;
   padding: 6px 16px;
   font-weight: 700;
@@ -456,28 +463,9 @@ a:hover {
   cursor: pointer;
 }
 
-.enquiry-form button:hover {
-  background: #1b5e20;
-}
-
-/* Mobile adjustment */
+/* Mobile */
 @media (max-width: 768px) {
   .enquiry-card {
     width: 92%;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
