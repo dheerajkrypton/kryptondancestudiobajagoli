@@ -89,4 +89,14 @@ function toggleEnquiry() {
     card.style.display === 'block' ? 'none' : 'block';
 }
 
+function openEnquiry() {
+  const overlay = document.getElementById('enquiryOverlay');
+  if (overlay) overlay.style.display = 'flex';
+}
+
+function closeEnquiry() {
+  const overlay = document.getElementById('enquiryOverlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
 
