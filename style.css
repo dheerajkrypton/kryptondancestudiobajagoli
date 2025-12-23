@@ -541,15 +541,15 @@ a:hover {
 /* ===== ENQUIRY IFRAME MODAL ===== */
 
 .enquiry-overlay {
-  display: none;
+  display: none;              /* stays hidden */
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.6);
   z-index: 9999;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
+
 
 .enquiry-frame-box {
   position: relative;
@@ -615,6 +615,7 @@ a:hover {
     height: 92vh;
   }
 }
+
 
 
 
