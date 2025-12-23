@@ -90,21 +90,13 @@ function toggleEnquiry() {
 }
 
 function openEnquiry() {
-  const overlay = document.getElementById('enquiryOverlay');
-  if (overlay) overlay.style.display = 'flex';
-}
-
-function closeEnquiry() {
-  const overlay = document.getElementById('enquiryOverlay');
-  if (overlay) overlay.style.display = 'none';
-}
-
-function openEnquiry() {
   document.getElementById('enquiryOverlay').style.display = 'flex';
 }
 
 function closeEnquiry() {
   document.getElementById('enquiryOverlay').style.display = 'none';
 }
+
+
 
 
