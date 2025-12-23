@@ -54,26 +54,28 @@
     </p>
   </section>
 
-<!-- ENQUIRY CARD -->
-<div class="enquiry-wrapper">
+<!-- ENQUIRY TRIGGER -->
+<div class="enquiry-trigger" onclick="openEnquiry()">
+  ENQUIRY FORM
+</div>
 
-  <!-- Small clickable card -->
-  <div class="enquiry-trigger" onclick="toggleEnquiry()">
-    ENQUIRY FORM
-  </div>
+<!-- ENQUIRY POPUP -->
+<div class="enquiry-overlay" id="enquiryOverlay">
+  <div class="enquiry-popup">
 
-  <!-- Hidden Form -->
-  <div class="enquiry-card" id="enquiryCard">
+    <button class="close-enquiry" onclick="closeEnquiry()">×</button>
+
+    <h3>ENQUIRY FORM</h3>
+
     <form class="enquiry-form">
-      
       <label>Full name*</label>
-      <input type="text" placeholder="Enter here" required>
+      <input type="text" required>
 
       <label>Email Address*</label>
-      <input type="email" placeholder="Enter here" required>
+      <input type="email" required>
 
       <label>Contact*</label>
-      <input type="tel" placeholder="Enter here" required>
+      <input type="tel" required>
 
       <label>Choose our service*</label>
       <select required>
@@ -83,14 +85,17 @@
       </select>
 
       <label>Comments / Questions*</label>
-      <textarea placeholder="Type here" rows="4" required></textarea>
+      <textarea rows="4" required></textarea>
 
       <button type="submit">SUBMIT</button>
-
     </form>
-  </div>
 
+  </div>
 </div>
+
+   
+
+    
 
   
 
@@ -311,6 +316,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
