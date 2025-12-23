@@ -395,6 +395,80 @@ a:hover {
   font-family: 'Bebas Neue', sans-serif;
 }
 
+/* =====================
+   ENQUIRY FORM CARD
+   ===================== */
+
+.enquiry-card {
+  background: #ffeb3b;              /* yellow */
+  width: 280px;
+  padding: 16px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 20px;
+  margin-left: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  z-index: 2;
+}
+
+.enquiry-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: left;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.enquiry-form label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  outline: none;
+}
+
+.enquiry-form textarea {
+  resize: none;
+}
+
+.enquiry-form button {
+  align-self: flex-start;
+  margin-top: 8px;
+  background: #2e7d32;     /* green */
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.enquiry-form button:hover {
+  background: #1b5e20;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+  .enquiry-card {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 
 
 
