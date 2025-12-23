@@ -590,6 +590,33 @@ a:hover {
     height: 90%;
   }
 }
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;        /* reduced spacing */
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.enquiry-form textarea {
+  height: 70px;    /* fixed height so no scroll */
+}
+@media (max-width: 768px) {
+  .enquiry-frame-box {
+    width: 94%;
+  }
+
+  .enquiry-frame-box iframe {
+    height: 92vh;
+  }
+}
+
+
 
 
 
