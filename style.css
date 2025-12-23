@@ -607,6 +607,25 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
+.enquiry-form {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.enquiry-form button {
+  margin-bottom: 0;
+}
+
+.enquiry-page,
+body {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+html, body {
+  height: auto;
+  overflow: hidden;
+}
+
 
 
 
