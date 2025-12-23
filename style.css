@@ -483,15 +483,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-.enquiry-overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 5000;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .enquiry-popup {
   background: #ffeb3b;
@@ -540,15 +532,6 @@ a:hover {
 }
 /* ===== ENQUIRY IFRAME MODAL ===== */
 
-.enquiry-overlay {
-  display: none;              /* stays hidden */
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: 9999;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .enquiry-frame-box {
@@ -615,6 +598,17 @@ a:hover {
     height: 92vh;
   }
 }
+/* === ENQUIRY OVERLAY (FINAL FIX) === */
+.enquiry-overlay {
+  display: none !important;   /* FORCE HIDDEN */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 
