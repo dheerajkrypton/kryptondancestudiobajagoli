@@ -80,14 +80,7 @@ document.querySelectorAll('.slider-container').forEach(container => {
   showSlide(currentIndex);
 });
 
-// Enquiry form toggle
-function toggleEnquiry() {
-  const card = document.getElementById('enquiryCard');
-  if (!card) return;
 
-  card.style.display =
-    card.style.display === 'block' ? 'none' : 'block';
-}
 
 
 function openEnquiry() {
@@ -98,6 +91,7 @@ function openEnquiry() {
 function closeEnquiry() {
   document.getElementById("enquiryOverlay").style.display = "none";
 }
+
 
 
 
