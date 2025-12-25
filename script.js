@@ -89,13 +89,16 @@ function toggleEnquiry() {
     card.style.display === 'block' ? 'none' : 'block';
 }
 
+
 function openEnquiry() {
+  console.log("openEnquiry clicked");
   document.getElementById("enquiryOverlay").style.display = "flex";
 }
 
 function closeEnquiry() {
   document.getElementById("enquiryOverlay").style.display = "none";
 }
+
 
 
 
