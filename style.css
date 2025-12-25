@@ -622,9 +622,11 @@ body {
   padding-bottom: 0;
 }
 html, body {
-  height: auto;
-  overflow: hidden;
+  height: 100%;
+  overflow-x: hidden;   /* stops sideways scroll */
+  overflow-y: auto;     /* ALLOWS NORMAL SCROLL */
 }
+
 
 
 
