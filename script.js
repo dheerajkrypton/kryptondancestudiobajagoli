@@ -90,12 +90,13 @@ function toggleEnquiry() {
 }
 
 function openEnquiry() {
-  document.getElementById('enquiryOverlay').style.display = 'flex';
+  document.getElementById("enquiryOverlay").style.display = "flex";
 }
 
 function closeEnquiry() {
-  document.getElementById('enquiryOverlay').style.display = 'none';
+  document.getElementById("enquiryOverlay").style.display = "none";
 }
+
 
 
 
