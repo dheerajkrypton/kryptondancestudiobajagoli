@@ -8,7 +8,12 @@
  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
+   <div id="enquiryOverlay" class="enquiry-overlay">
+  <div class="enquiry-box">
+    <span onclick="closeEnquiry()">✕</span>
+    <iframe src="enquiry.html"></iframe>
+  </div>
+</div>
 
 
 </head>
@@ -54,12 +59,7 @@
       <strong>Opening date:</strong> 26 July 2019
     </p>
   </section>
-  <div id="enquiryOverlay" class="enquiry-overlay">
-  <div class="enquiry-box">
-    <span onclick="closeEnquiry()">✕</span>
-    <iframe src="enquiry.html"></iframe>
-  </div>
-</div>
+ 
 
 
 <div class="enquiry-trigger" onclick="openEnquiry()">
@@ -283,6 +283,7 @@
 
 </body>
 </html>
+
 
 
 
