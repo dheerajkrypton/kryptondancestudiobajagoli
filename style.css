@@ -1,3 +1,4 @@
+
 /* ===========================
    style.css (mobile-first)
    =========================== */
@@ -9,8 +10,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- background-color: #fff;
-
+  background-color: #fff; /* white */
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -129,6 +129,8 @@ section.card h2 {
   text-align: center;
   color: #000;
 }
+
+/* ===== SECTION BACKGROUNDS ===== */
 #founder,
 #contact,
 #our-studio,
@@ -138,15 +140,15 @@ section.card h2 {
 #our-services,
 #rules,
 #location {
-  background-color: #d9d9d9 !important;
+  background-color: #d9d9d9 !important; /* light grey */
   color: #000;
 }
 
+/* Dance Styles Section */
 #classes {
-  background-color: #fff !important;
+  background-color: #fff !important; /* white */
+  color: #000;
 }
-
-
 
 /* Class Timings List inside Dance Styles – remove bullets */
 #classes .centered-list {
@@ -169,8 +171,6 @@ section.card h2 {
   scroll-margin-top: 80px;
   max-width: 1100px;
 }
-
-
 
 /* ===== DANCE STYLE IMAGES REDUCED SIZE ===== */
 #classes .dance-style-item img {
@@ -457,3 +457,98 @@ a:hover {
   border-radius: 6px;
   cursor: pointer;
 }
+
+/* ===== FULL WEBSITE AI BACKGROUND ===== */
+
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transition: background-image 1.2s ease-in-out;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
+/* ===== FORCE SHOW AI BACKGROUND IMAGES ===== */
+
+/* Make body background visible */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* REMOVE solid backgrounds blocking the AI images */
+#founder,
+#contact,
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location,
+#classes,
+.enquiry-page,
+section,
+.main,
+.wrapper {
+  background-color: transparent !important;
+}
+/* ======================================
+   FULL SCREEN AI BACKGROUND – FINAL FIX
+   ====================================== */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* FORCE BACKGROUND IMAGE TO COVER FULL SCREEN */
+body {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+/* Mobile fix – iOS / Android */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+}
+
+/* REMOVE ALL BLOCKING BACKGROUNDS */
+section,
+.card,
+#founder,
+#contact,
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location,
+#classes {
+  background: transparent !important;
+}
+
+/* Ensure content stays above background */
+body > * {
+  position: relative;
+  z-index: 2;
+}
+ 
