@@ -474,6 +474,34 @@ body {
   }
 }
 
+/* ===== FORCE SHOW AI BACKGROUND IMAGES ===== */
+
+/* Make body background visible */
+body {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* REMOVE solid backgrounds blocking the AI images */
+#founder,
+#contact,
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location,
+#classes,
+.enquiry-page,
+section,
+.main,
+.wrapper {
+  background-color: transparent !important;
+}
+
 
 
 
