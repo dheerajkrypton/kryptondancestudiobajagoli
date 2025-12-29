@@ -80,6 +80,29 @@ document.querySelectorAll('.slider-container').forEach(container => {
   showSlide(currentIndex);
 });
 
+/* ===== AUTO BACKGROUND CHANGER ===== */
+
+const bgImages = [
+  "images/bg/bg1.jpg",
+  "images/bg/bg2.jpg",
+  "images/bg/bg3.jpg",
+  "images/bg/bg4.jpg",
+  "images/bg/bg5.jpg"
+];
+
+let bgIndex = 0;
+
+function changeBackground() {
+  document.body.style.backgroundImage = `url('${bgImages[bgIndex]}')`;
+  bgIndex = (bgIndex + 1) % bgImages.length;
+}
+
+// initial load
+changeBackground();
+
+// change every 8 seconds
+setInterval(changeBackground, 8000);
+
 
 
 
