@@ -9,7 +9,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
- 
+ background-color: #fff;
+
   color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -128,6 +129,22 @@ section.card h2 {
   text-align: center;
   color: #000;
 }
+#founder,
+#contact,
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location {
+  background-color: #d9d9d9 !important;
+  color: #000;
+}
+
+#classes {
+  background-color: #fff !important;
+}
 
 
 
@@ -152,10 +169,7 @@ section.card h2 {
   scroll-margin-top: 80px;
   max-width: 1100px;
 }
-.card {
-  background: transparent !important;
-  box-shadow: none !important;
-}
+
 
 
 /* ===== DANCE STYLE IMAGES REDUCED SIZE ===== */
@@ -443,55 +457,3 @@ a:hover {
   border-radius: 6px;
   cursor: pointer;
 }
-/* ===== KING UNITED STYLE BACKGROUND FIX ===== */
-
-body {
-  background-image: url("images/bg/bg1.jpg"); /* test image */
-  background-size: cover !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  background-attachment: fixed;
-  min-height: 100vh;
-}
-
-/* DARK OVERLAY LIKE KINGS UNITED */
-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-  z-index: 0;
-}
-
-section {
-  position: relative;
-}
-
-section > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* REMOVE ALL SOLID BACKGROUNDS */
-section,
-.card,
-.enquiry-page {
-  background: transparent !important;
-}
-
-/* ===== FORCE FULLSCREEN SECTIONS LIKE KINGS UNITED ===== */
-
-section {
-  min-height: 100vh;   /* keeps full screen background */
-  position: relative;
-}
-
-
-/* Prevent enquiry card from stretching full screen */
-.enquiry-page {
-  min-height: auto;
-}
-
-
-
-
