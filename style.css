@@ -508,6 +508,34 @@ section,
   background: transparent !important;
 }
 
+/* 🎯 Allow AI body background to be visible */
+body {
+  background-color: transparent !important;
+}
+
+html {
+  background: none !important;
+}
+
+section.card,
+section.card > * {
+  background: transparent !important;
+}
+
+/* Remove section background overrides */
+#founder,
+#contact,
+#our-studio,
+#achievements,
+#gallery,
+#registration,
+#our-services,
+#rules,
+#location,
+#classes {
+  background: transparent !important;
+}
+
 
 
 
