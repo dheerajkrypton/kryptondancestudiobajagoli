@@ -674,6 +674,41 @@ main section li {
     background-attachment: scroll;
   }
 }
+/* SECTION TITLE */
+.reviews-title {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* SLIDER WRAPPER */
+.reviews-slider {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* TRACK */
+.reviews-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* WHITE CARD */
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 100%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* FORCE REVIEW TEXT BLACK (iframe-safe outer styles) */
+.review-card * {
+  color: #000000 !important;
+}
+
 
 
 
