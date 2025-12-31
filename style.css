@@ -774,6 +774,21 @@ main section li {
 .reviews-card .reviewer-name {
     color: #000 !important;  /* forces black text */
 }
+#google-reviews .reviewer-name,
+#google-reviews .review-text,
+#google-reviews .review-emoji,
+#google-reviews .review-stars {
+  color: #000 !important;  /* black text */
+}
+
+#google-reviews .reviews-card {
+  background-color: #fff; /* keep the white card */
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+
 
 
 
