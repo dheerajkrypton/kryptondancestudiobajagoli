@@ -675,6 +675,11 @@ main section li {
   }
 }
 
+/* Try to force Elfsight widget text color */
+.elfsight-app-121366f1-a02d-46bf-a549-cc9c961baf9f * {
+  color: #fff !important;   /* keep black on white card */
+}
+
 
 
 
