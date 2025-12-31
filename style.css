@@ -675,7 +675,7 @@ main section li {
   }
 }
 
-/* Section Title */
+/* Section Title with orange underline */
 .reviews-section h2 {
   color: white;
   text-align: center;
@@ -697,9 +697,9 @@ main section li {
 /* Review Card */
 .review-card {
   display: none;
-  background: #fff;       /* white card */
-  padding: 20px;
-  border-radius: 10px;
+  background: #fff;           /* white card */
+  padding: 25px 20px;
+  border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
@@ -708,9 +708,21 @@ main section li {
   display: block;
 }
 
-.review-profile {
-  font-size: 50px;
+.review-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 12px;
+}
+
+.review-profile {
+  font-size: 40px;
+}
+
+.google-icon {
+  color: #4285F4; /* Google blue */
+  font-size: 24px;
 }
 
 .review-stars {
@@ -727,7 +739,7 @@ main section li {
 }
 
 .review-text {
-  color: black;           /* review text in black */
+  color: black;               /* review text in black */
   font-size: 16px;
   line-height: 1.5;
 }
