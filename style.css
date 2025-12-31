@@ -675,10 +675,16 @@ main section li {
   }
 }
 
-/* Try to force Elfsight widget text color */
-.elfsight-app-121366f1-a02d-46bf-a549-cc9c961baf9f * {
-  color: #fff !important;   /* keep black on white card */
+/* Google Reviews section title – white */
+#google-reviews h2 {
+  color: #ffffff !important;
 }
+/* Google Reviews widget text stays black */
+#google-reviews .elfsight-app * {
+  color: #000000 !important;
+}
+
+
 
 
 
