@@ -128,6 +128,32 @@ rotateBackground();
 // rotate every 8 seconds
 setInterval(rotateBackground, 8000);
 
+const aiBgImages = [
+  "images/bg/bg1.jpg",
+  "images/bg/bg2.jpg",
+  "images/bg/bg3.jpg",
+  "images/bg/bg4.jpg",
+  "images/bg/bg5.jpg"
+];
+
+let aiIndex = 0;
+const heroElem = document.querySelector(".studio-title");
+
+function rotateHeroBackground() {
+  if (!heroElem) return;
+  heroElem.style.backgroundImage = `url('${aiBgImages[aiIndex]}')`;
+  heroElem.style.backgroundSize = "cover";
+  heroElem.style.backgroundPosition = "center center";
+  heroElem.style.backgroundRepeat = "no-repeat";
+  aiIndex = (aiIndex + 1) % aiBgImages.length;
+}
+
+// initial
+rotateHeroBackground();
+
+// rotate every 8 seconds
+setInterval(rotateHeroBackground, 8000);
+
 
 
 
