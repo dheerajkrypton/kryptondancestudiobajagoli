@@ -128,49 +128,8 @@ rotateBackground();
 // rotate every 8 seconds
 setInterval(rotateBackground, 5000);
 
-const reviews = document.querySelectorAll('.review-card');
-let current = 0;
 
-function showNextReview() {
-  reviews[current].classList.remove('active');
-  current = (current + 1) % reviews.length;
-  reviews[current].classList.add('active');
-}
 
-// Rotate every 5 seconds
-setInterval(showNextReview, 5000);
-const reviewsCard = document.querySelector('#google-reviews .reviews-slider');
-
-const leftArrow = document.querySelector('#google-reviews .left-arrow');
-const rightArrow = document.querySelector('#google-reviews .right-arrow');
-
-const reviews = document.querySelectorAll('.review-card');
-const leftArrow = document.querySelector('#google-reviews .left-arrow');
-const rightArrow = document.querySelector('#google-reviews .right-arrow');
-
-let current = 0;
-
-function showReview(index) {
-  reviews.forEach(r => r.classList.remove('active'));
-  reviews[index].classList.add('active');
-}
-
-function nextReview() {
-  current = (current + 1) % reviews.length;
-  showReview(current);
-}
-
-function prevReview() {
-  current = (current - 1 + reviews.length) % reviews.length;
-  showReview(current);
-}
-
-// Auto rotate
-setInterval(nextReview, 5000);
-
-// Arrow clicks
-rightArrow.addEventListener('click', nextReview);
-leftArrow.addEventListener('click', prevReview);
 
 
 
