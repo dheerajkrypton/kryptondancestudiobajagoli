@@ -756,5 +756,13 @@ main section li {
   border-bottom: 3px solid #ff4500; /* same as other sections */
   padding-bottom: 6px;         /* same spacing as other titles */
 }
+/* ===============================
+   GOOGLE REVIEWS TEXT COLOR FIX
+   =============================== */
+.reviews-card p,
+.reviews-card .reviewer-name {
+  color: #000 !important; /* black text */
+}
+
 
 
