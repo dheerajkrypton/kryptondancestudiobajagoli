@@ -678,13 +678,14 @@ main section li {
 /* Section Title with orange underline */
 .reviews-section h2 {
   color: white;
-  text-align: center;
-  border-bottom: 3px solid orange;
-  display: inline-block;
+  text-align: center;           /* center aligned */
+  border-bottom: 3px solid #ff4500; /* same orange as other sections */
   padding-bottom: 6px;
-  margin-bottom: 20px;
+  display: inline-block;
+  margin: 0 auto 20px auto;
   font-size: 28px;
 }
+
 
 /* Reviews Slider Container */
 .reviews-slider {
@@ -743,3 +744,4 @@ main section li {
   font-size: 16px;
   line-height: 1.5;
 }
+
