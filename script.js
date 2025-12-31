@@ -128,5 +128,16 @@ rotateBackground();
 // rotate every 8 seconds
 setInterval(rotateBackground, 5000);
 
+<script>
+const track = document.querySelector(".reviews-track");
+let index = 0;
+
+setInterval(() => {
+  index++;
+  if (index > 0) index = 0; // only one iframe
+  track.style.transform = `translateX(-${index * 100}%)`;
+}, 5000);
+</script>
+
 
 
