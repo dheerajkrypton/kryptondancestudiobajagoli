@@ -657,78 +657,31 @@ main section li {
   text-shadow: 0 2px 6px rgba(0,0,0,0.7);
 }
 /* =========================
-   AI BACKGROUND SLIDESHOW
-   ========================= */
+   DYNAMIC AI BACKGROUND (from Founder section onward)
+========================= */
 
-.bg-slideshow {
-  position: relative;
-  z-index: 1;
-}
-
-/* pseudo element holds background */
-.bg-slideshow::before {
-  content: "";
+.dynamic-bg {
   position: fixed;
   inset: 0;
-  z-index: -1;
-
+  z-index: -3; /* behind everything */
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-
-  animation: bgChange 30s infinite ease-in-out;
-}
-
-/* animation */
-@keyframes bgChange {
-  0% {
-    background-image: url("images/bg/bg1.jpg");
-  }
-  20% {
-    background-image: url("images/bg/bg2.jpg");
-  }
-  40% {
-    background-image: url("images/bg/bg3.jpg");
-  }
-  60% {
-    background-image: url("images/bg/bg4.jpg");
-  }
-  80% {
-    background-image: url("images/bg/bg5.jpg");
-  }
-  100% {
-    background-image: url("images/bg/bg1.jpg");
-  }
+  transition: background-image 1.2s ease-in-out;
 }
 
 /* overlay for readability */
-.bg-slideshow::after {
+.dynamic-bg::after {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.45);
-  z-index: -1;
+  pointer-events: none;
 }
 
-/* cards stay readable */
-.bg-slideshow .card {
-  background: rgba(255,255,255,0.88);
-}
-
-/* MOBILE OPTIMIZATION */
-@media (max-width: 768px) {
-  .bg-slideshow::before {
-    background-position: center top;
+/* disable fixed on mobile for smooth scroll */
+@media (max-width: 767px) {
+  .dynamic-bg {
+    background-attachment: scroll;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
