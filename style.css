@@ -675,14 +675,7 @@ main section li {
   }
 }
 
-/* Google Reviews section title – white */
-#google-reviews h2 {
-  color: #ffffff !important;
-}
-/* Google Reviews widget text stays black */
-#google-reviews .elfsight-app * {
-  color: #000000 !important;
-}
+
 
 
 
