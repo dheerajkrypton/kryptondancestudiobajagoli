@@ -789,6 +789,24 @@ main section li {
 }
 
 
+/* Optional: smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reviews card styling */
+.reviews-section {
+  padding: 20px;
+  margin: 18px auto;
+  max-width: 1100px;
+}
+
+.reviews-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 
 
 
