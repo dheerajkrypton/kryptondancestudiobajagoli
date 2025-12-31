@@ -146,6 +146,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+const reviewCards = document.querySelectorAll('#google-reviews .review-card');
+let reviewIndex = 0;
+
+function showReview(index) {
+  reviewCards.forEach((card, i) => {
+    card.classList.toggle('active', i === index);
+  });
+}
+
+// initial
+showReview(reviewIndex);
+
+// auto rotate every 5 seconds
+setInterval(() => {
+  reviewIndex = (reviewIndex + 1) % reviewCards.length;
+  showReview(reviewIndex);
+}, 5000);
+
 
 
 
