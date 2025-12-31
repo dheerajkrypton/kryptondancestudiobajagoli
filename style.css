@@ -73,7 +73,7 @@ header.site-header {
 
 /* HERO */
 .studio-title {
-  
+  background: url("images/titlebg.jpg") center center / cover no-repeat;
   min-height: 70vh;
   display: grid;
   place-items: center;
@@ -670,5 +670,6 @@ main section li {
     background-attachment: scroll;
   }
 }
+
 
 
