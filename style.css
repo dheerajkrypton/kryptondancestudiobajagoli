@@ -552,3 +552,33 @@ body > * {
   z-index: 2;
 }
  
+/* =========================
+   DYNAMIC AI BACKGROUND (from Founder section onward)
+========================= */
+
+.dynamic-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -3; /* behind everything */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-image 1.2s ease-in-out;
+}
+
+/* overlay for readability */
+.dynamic-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  pointer-events: none;
+}
+
+/* disable fixed on mobile for smooth scroll */
+@media (max-width: 767px) {
+  .dynamic-bg {
+    background-attachment: scroll;
+  }
+}
+
