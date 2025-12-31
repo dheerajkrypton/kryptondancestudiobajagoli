@@ -806,6 +806,73 @@ html {
   flex-direction: column;
   gap: 16px;
 }
+/* ===== GOOGLE REVIEW CARD LAYOUT FIX ===== */
+
+.review-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 420px;
+  height: 320px;                 /* SAME HEIGHT FOR ALL */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Header row */
+.review-header {
+  display: flex;
+  justify-content: space-between; /* profile left, google right */
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-profile {
+  font-size: 40px;
+}
+
+/* Google icon original color */
+.google-icon {
+  color: #4285F4;
+  font-size: 22px;
+}
+
+/* Reviewer name */
+.reviewer-name {
+  color: #000 !important;
+  font-weight: 700;
+  margin: 6px 0 4px;
+  text-align: left;
+}
+
+/* Stars */
+.review-stars {
+  color: #ff9800;
+  font-size: 16px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+/* REVIEW TEXT AREA (SCROLLABLE) */
+.review-text {
+  color: #000 !important;
+  font-size: 15px;
+  line-height: 1.5;
+  overflow-y: auto;      /* SCROLL */
+  margin-top: 6px;
+  padding-right: 6px;
+}
+
+/* Scrollbar (optional but clean) */
+.review-text::-webkit-scrollbar {
+  width: 4px;
+}
+.review-text::-webkit-scrollbar-thumb {
+  background: #ff4500;
+  border-radius: 4px;
+}
+
 
 
 
