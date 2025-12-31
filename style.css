@@ -600,6 +600,24 @@ body {
     background-position: top center;
   }
 }
+body,
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body li,
+body a,
+body span {
+  color: white;
+}
+.card {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+}
+
 
 
 
