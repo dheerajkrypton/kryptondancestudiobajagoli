@@ -102,6 +102,32 @@ changeBackground();
 
 // change every 8 seconds
 setInterval(changeBackground, 8000);
+/* =========================
+   AUTO AI BACKGROUND SLIDESHOW
+========================= */
+
+const aiBgImages = [
+  "images/bg/bg1.jpg",
+  "images/bg/bg2.jpg",
+  "images/bg/bg3.jpg",
+  "images/bg/bg4.jpg",
+  "images/bg/bg5.jpg"
+];
+
+let aiIndex = 0;
+const bgElem = document.querySelector(".dynamic-bg");
+
+function rotateBackground() {
+  bgElem.style.backgroundImage = `url('${aiBgImages[aiIndex]}')`;
+  aiIndex = (aiIndex + 1) % aiBgImages.length;
+}
+
+// initial
+rotateBackground();
+
+// rotate every 8 seconds
+setInterval(rotateBackground, 8000);
+
 
 
 
