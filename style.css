@@ -458,22 +458,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* ===== FULL WEBSITE AI BACKGROUND ===== */
 
-body {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  transition: background-image 1.2s ease-in-out;
-}
-
-/* Mobile fix */
-@media (max-width: 768px) {
-  body {
-    background-attachment: scroll;
-  }
-}
 
 /* ===== FORCE SHOW AI BACKGROUND IMAGES ===== */
 
@@ -501,7 +486,7 @@ section,
    ====================================== */
 
 ;
-}
+
 
 
 
@@ -685,3 +670,4 @@ main section li {
     background-attachment: scroll;
   }
 }
+
