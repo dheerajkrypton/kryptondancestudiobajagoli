@@ -617,6 +617,31 @@ body span {
   background: rgba(0, 0, 0, 0.55);
   backdrop-filter: blur(4px);
 }
+.ai-bg {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("images/bg/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  .ai-bg {
+    background-attachment: scroll;
+  }
+}
+.ai-bg h2,
+.ai-bg h3,
+.ai-bg p,
+.ai-bg li {
+  color: #ffffff;
+}
+.card {
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
 
 
 
