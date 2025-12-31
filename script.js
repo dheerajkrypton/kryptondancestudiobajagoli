@@ -101,7 +101,7 @@ function changeBackground() {
 changeBackground();
 
 // change every 8 seconds
-setInterval(changeBackground, 8000);
+setInterval(changeBackground, 5000);
 /* =========================
    AUTO AI BACKGROUND SLIDESHOW
 ========================= */
@@ -126,6 +126,7 @@ function rotateBackground() {
 rotateBackground();
 
 // rotate every 8 seconds
-setInterval(rotateBackground, 8000);
+setInterval(rotateBackground, 5000);
+
 
 
