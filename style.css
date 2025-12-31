@@ -745,3 +745,10 @@ main section li {
   line-height: 1.5;
 }
 
+.reviews-section {
+  display: flex;
+  flex-direction: column; /* stack title and reviews vertically */
+  align-items: center;    /* center everything horizontally */
+  text-align: center;     /* also ensures inline content is centered */
+}
+
