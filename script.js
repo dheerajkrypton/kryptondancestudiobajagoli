@@ -139,5 +139,17 @@ function showNextReview() {
 
 // Rotate every 5 seconds
 setInterval(showNextReview, 5000);
+const reviewsCard = document.querySelector('#google-reviews .reviews-card');
+const leftArrow = document.querySelector('#google-reviews .left-arrow');
+const rightArrow = document.querySelector('#google-reviews .right-arrow');
+
+leftArrow.addEventListener('click', () => {
+  reviewsCard.scrollBy({ left: -reviewsCard.offsetWidth, behavior: 'smooth' });
+});
+
+rightArrow.addEventListener('click', () => {
+  reviewsCard.scrollBy({ left: reviewsCard.offsetWidth, behavior: 'smooth' });
+});
+
 
 
