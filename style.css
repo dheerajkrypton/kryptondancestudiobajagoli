@@ -594,5 +594,12 @@ body {
   background-attachment: fixed;
   color: white;
 }
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-position: top center;
+  }
+}
+
 
 
