@@ -675,6 +675,59 @@ main section li {
   }
 }
 
+.reviews-section {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-section h2 {
+  color: white; /* title in white */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.reviews-slider {
+  display: flex;
+  overflow: hidden;
+}
+
+.review {
+  min-width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.review-text {
+  font-size: 16px;
+  color: black; /* review text in black */
+  margin-bottom: 8px;
+}
+
+.review-author {
+  font-weight: bold;
+  font-size: 14px;
+  color: black; /* author in black */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 16px;
+    margin: 20px auto;
+  }
+  .review-text {
+    font-size: 14px;
+  }
+  .review-author {
+    font-size: 12px;
+  }
+}
+
 
 
 
