@@ -128,40 +128,15 @@ rotateBackground();
 // rotate every 8 seconds
 setInterval(rotateBackground, 5000);
 
-const slider = document.querySelector('.reviews-slider');
-const cards = document.querySelectorAll('.review-card');
-const dotsContainer = document.querySelector('.slider-dots');
+const reviews = document.querySelectorAll('.review-card');
+let currentReview = 0;
 
-let currentIndex = 0;
-
-// create dots
-cards.forEach((_, idx) => {
-  const dot = document.createElement('span');
-  if (idx === 0) dot.classList.add('active');
-  dot.addEventListener('click', () => {
-    currentIndex = idx;
-    updateSlider();
-  });
-  dotsContainer.appendChild(dot);
-});
-
-function updateSlider() {
-  const offset = -currentIndex * (cards[0].offsetWidth + 20);
-  slider.style.transform = `translateX(${offset}px)`;
-  dotsContainer.querySelectorAll('span').forEach((dot, idx) => {
-    dot.classList.toggle('active', idx === currentIndex);
-  });
+function showNextReview() {
+  reviews[currentReview].classList.remove('active');
+  currentReview = (currentReview + 1) % reviews.length;
+  reviews[currentReview].classList.add('active');
 }
 
-// auto-slide every 5 seconds
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % cards.length;
-  updateSlider();
-}, 5000);
-
-
-
-
-
-
+// rotate every 5 seconds
+setInterval(showNextReview, 5000);
 
