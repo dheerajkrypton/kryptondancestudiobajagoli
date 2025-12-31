@@ -641,6 +641,45 @@ body span {
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
 }
+/* ===== MAKE ALL SECTION TEXT WHITE (EXCEPT HERO) ===== */
+
+/* Section titles */
+main section h2,
+main section h3 {
+  color: #ffffff;
+}
+
+/* Paragraphs, lists, links inside sections */
+main section p,
+main section li,
+main section a,
+main section span {
+  color: #ffffff;
+}
+
+/* Icons (Font Awesome) */
+main section i {
+  color: #ffffff;
+}
+
+/* Founder name & description */
+.founder-text-overlay,
+.founder-text-overlay p,
+.founder-text-overlay h2 {
+  color: #ffffff;
+}
+
+/* Contact icons hover stays visible */
+.contact-icons-row a:hover i {
+  color: #dddddd;
+}
+main section h2,
+main section h3,
+main section p,
+main section li {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
 
 
 
