@@ -128,6 +128,21 @@ rotateBackground();
 // rotate every 8 seconds
 setInterval(rotateBackground, 5000);
 
+<script>
+const reviewsSlider = document.querySelector('.reviews-slider');
+const reviews = document.querySelectorAll('.review');
+let index = 0;
+
+function showNextReview() {
+  index = (index + 1) % reviews.length;
+  const offset = -index * 100; // slide by 100%
+  reviewsSlider.style.transform = `translateX(${offset}%)`;
+}
+
+// Rotate every 5 seconds
+setInterval(showNextReview, 5000);
+</script>
+
 
 
 
