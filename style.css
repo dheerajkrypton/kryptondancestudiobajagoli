@@ -787,6 +787,25 @@ main section li {
   border-radius: 8px;
   position: relative;
 }
+.review-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 69, 0, 0.8);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.left-arrow { left: 10px; }
+.right-arrow { right: 10px; }
+
+.review-arrow:hover { background: rgba(255,69,0,1); }
+
 
 
 
