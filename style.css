@@ -945,6 +945,23 @@ html {
   background: #ff4500;
   border-radius: 10px;
 }
+.review-card {
+  max-height: 260px;        /* SAME height for all cards */
+  overflow-y: auto;         /* enables vertical scroll */
+}
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.review-header-left {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+}
+
 
 
 
