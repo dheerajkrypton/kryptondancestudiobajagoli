@@ -763,6 +763,12 @@ main section li {
 .reviews-card .reviewer-name {
   color: #000 !important; /* black text */
 }
+/* GOOGLE REVIEWS TEXT COLOR FIX - OVERRIDE GLOBAL WHITE */
+#google-reviews .reviews-card p,
+#google-reviews .reviews-card .reviewer-name {
+    color: #000 !important; /* forces black text */
+}
+
 
 
 
