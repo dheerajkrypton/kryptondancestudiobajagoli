@@ -872,6 +872,80 @@ html {
   background: #ff4500;
   border-radius: 4px;
 }
+/* ===== GOOGLE REVIEWS FINAL LAYOUT ===== */
+
+#google-reviews .review-card {
+  display: none;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  height: 260px;                 /* SAME HEIGHT */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+#google-reviews .review-card.active {
+  display: block;
+}
+
+/* TOP ROW */
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* LEFT USER INFO */
+.review-user {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.review-profile {
+  font-size: 36px;
+}
+
+/* NAME + STARS */
+.reviewer-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000 !important;
+}
+
+.review-stars {
+  color: orange;
+  font-size: 14px;
+}
+
+/* GOOGLE ICON */
+.google-icon {
+  font-size: 22px;
+  color: #4285F4;
+}
+
+/* REVIEW TEXT AREA */
+.review-content {
+  margin-top: 12px;
+  height: 130px;               /* FIXED TEXT AREA */
+  overflow-y: auto;            /* SCROLL IF LONG */
+}
+
+.review-text {
+  color: #000 !important;      /* FORCE BLACK */
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Scrollbar styling (optional but clean) */
+.review-content::-webkit-scrollbar {
+  width: 4px;
+}
+.review-content::-webkit-scrollbar-thumb {
+  background: #ff4500;
+  border-radius: 10px;
+}
+
 
 
 
