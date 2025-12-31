@@ -158,7 +158,7 @@ section.card h2 {
   list-style: none; /* removes bullet points */
   margin: 0;
   padding: 12px;
-  background-color: #d9d9d9; /* grey for the list */
+  background-color: transparent !important; /* grey for the list */
   border-radius: 8px;
 }
 
@@ -674,6 +674,7 @@ main section li {
     background-attachment: scroll;
   }
 }
+
 
 
 
