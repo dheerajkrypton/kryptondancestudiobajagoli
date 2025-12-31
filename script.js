@@ -139,17 +139,39 @@ function showNextReview() {
 
 // Rotate every 5 seconds
 setInterval(showNextReview, 5000);
-const reviewsCard = document.querySelector('#google-reviews .reviews-card');
+const reviewsCard = document.querySelector('#google-reviews .reviews-slider');
+
 const leftArrow = document.querySelector('#google-reviews .left-arrow');
 const rightArrow = document.querySelector('#google-reviews .right-arrow');
 
-leftArrow.addEventListener('click', () => {
-  reviewsCard.scrollBy({ left: -reviewsCard.offsetWidth, behavior: 'smooth' });
-});
+const reviews = document.querySelectorAll('.review-card');
+const leftArrow = document.querySelector('#google-reviews .left-arrow');
+const rightArrow = document.querySelector('#google-reviews .right-arrow');
 
-rightArrow.addEventListener('click', () => {
-  reviewsCard.scrollBy({ left: reviewsCard.offsetWidth, behavior: 'smooth' });
-});
+let current = 0;
+
+function showReview(index) {
+  reviews.forEach(r => r.classList.remove('active'));
+  reviews[index].classList.add('active');
+}
+
+function nextReview() {
+  current = (current + 1) % reviews.length;
+  showReview(current);
+}
+
+function prevReview() {
+  current = (current - 1 + reviews.length) % reviews.length;
+  showReview(current);
+}
+
+// Auto rotate
+setInterval(nextReview, 5000);
+
+// Arrow clicks
+rightArrow.addEventListener('click', nextReview);
+leftArrow.addEventListener('click', prevReview);
+
 
 
 
