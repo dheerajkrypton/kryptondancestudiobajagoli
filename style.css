@@ -769,6 +769,12 @@ main section li {
     color: #000 !important; /* forces black text */
 }
 
+/* Make Google review texts and reviewer names black */
+.reviews-card p,
+.reviews-card .reviewer-name {
+    color: #000 !important;  /* forces black text */
+}
+
 
 
 
