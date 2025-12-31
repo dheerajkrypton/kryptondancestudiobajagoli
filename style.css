@@ -680,6 +680,40 @@ main section li {
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
+/* =========================
+   GLOBAL WHITE TEXT (EXCEPT HERO)
+   ========================= */
+
+/* Section titles */
+main section h2,
+main section h3 {
+  color: #ffffff;
+}
+
+/* Paragraphs & lists */
+main section p,
+main section li {
+  color: #ffffff;
+}
+
+/* Founder section specific text */
+#founder,
+#founder h2,
+#founder p,
+#founder .founder-name,
+#founder .founder-desc {
+  color: #ffffff;
+}
+
+/* Links inside sections */
+main section a {
+  color: #ffffff;
+}
+/* Social icons white */
+.icon-link i {
+  color: #ffffff;
+}
+
 
 
 
