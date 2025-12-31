@@ -675,41 +675,59 @@ main section li {
   }
 }
 
-.reviews-section {
-  max-width: 600px;
-  margin: 40px auto;
-  text-align: center;
-}
-
+/* Section Title */
 .reviews-section h2 {
-  color: white; /* your desired title color */
+  color: white;
+  text-align: center;
+  border-bottom: 3px solid orange;
+  display: inline-block;
+  padding-bottom: 6px;
   margin-bottom: 20px;
   font-size: 28px;
 }
 
+/* Reviews Slider Container */
 .reviews-slider {
   position: relative;
-  height: 180px; /* adjust for card height */
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
+/* Review Card */
 .review-card {
   display: none;
-  background: white;
-  color: black;
-  border-radius: 10px;
+  background: #fff;       /* white card */
   padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .review-card.active {
   display: block;
 }
 
+.review-profile {
+  font-size: 50px;
+  margin-bottom: 12px;
+}
+
+.review-stars {
+  color: orange;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
 .reviewer-name {
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: black;
+  font-size: 16px;
+}
+
+.review-text {
+  color: black;           /* review text in black */
+  font-size: 16px;
+  line-height: 1.5;
 }
