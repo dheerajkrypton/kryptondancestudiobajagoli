@@ -129,14 +129,14 @@ rotateBackground();
 setInterval(rotateBackground, 5000);
 
 const reviews = document.querySelectorAll('.review-card');
-let currentReview = 0;
+let current = 0;
 
 function showNextReview() {
-  reviews[currentReview].classList.remove('active');
-  currentReview = (currentReview + 1) % reviews.length;
-  reviews[currentReview].classList.add('active');
+  reviews[current].classList.remove('active');
+  current = (current + 1) % reviews.length;
+  reviews[current].classList.add('active');
 }
 
-// rotate every 5 seconds
+// Rotate every 5 seconds
 setInterval(showNextReview, 5000);
 
