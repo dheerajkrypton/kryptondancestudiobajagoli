@@ -167,7 +167,7 @@ document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   const service = document.getElementById("service").value;
   const message = document.getElementById("message").value.trim();
 
-  const instructorNumber = "919632528098"; // instructor WhatsApp number
+  const instructorNumber = "919606187817"; // instructor WhatsApp number
 
   const whatsappMessage =
 `New Enquiry – Krypton Dance Studio
@@ -188,6 +188,7 @@ ${message}`;
   );
 });
 </script>
+
 
 
 
