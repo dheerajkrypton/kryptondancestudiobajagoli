@@ -961,6 +961,14 @@ html {
   align-items: center;
   text-align: left;
 }
+.enquiry-form input,
+.enquiry-form textarea,
+.enquiry-form select {
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
 
 
 
