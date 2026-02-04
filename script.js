@@ -157,6 +157,38 @@ function rotateReviews() {
 
 setInterval(rotateReviews, 5000);
 
+<script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const contact = document.getElementById("contact").value.trim();
+  const service = document.getElementById("service").value;
+  const message = document.getElementById("message").value.trim();
+
+  const instructorNumber = "919632528098"; // instructor WhatsApp number
+
+  const whatsappMessage =
+`New Enquiry – Krypton Dance Studio
+
+Name: ${name}
+Email: ${email}
+Contact: ${contact}
+Service: ${service}
+
+Message:
+${message}`;
+
+  const encodedMsg = encodeURIComponent(whatsappMessage);
+
+  window.open(
+    `https://wa.me/${instructorNumber}?text=${encodedMsg}`,
+    "_blank"
+  );
+});
+</script>
+
 
 
 
