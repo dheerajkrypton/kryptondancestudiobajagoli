@@ -189,6 +189,32 @@ ${message}`;
 });
 </script>
 
+const translateBtn = document.getElementById("translateBtn");
+const aboutText = document.getElementById("aboutText");
+
+let isKannada = false;
+
+const englishText = `
+At KRYPTON DANCE STUDIO, we believe dance is for everyone! 😍 Join our vibrant community and explore hip-hop, bollywood, semi-classical, folk and more. Whether you’re a beginner or a pro, we’re here to help you shine. 💫 Contact us to get started!🔥<br>
+<strong>Opening date:</strong> 26 July 2019
+`;
+
+const kannadaText = `
+KRYPTON ಡ್ಯಾನ್ಸ್ ಸ್ಟುಡಿಯೋದಲ್ಲಿ, ನೃತ್ಯ ಎಲ್ಲರಿಗೂ ಸೇರಿದೆ ಎಂದು ನಾವು ನಂಬುತ್ತೇವೆ! 😍 ನಮ್ಮ ಉತ್ಸಾಹಭರಿತ ಸಮುದಾಯಕ್ಕೆ ಸೇರಿ ಹಿಪ್-ಹಾಪ್, ಬಾಲಿವುಡ್, ಸೆಮಿ-ಕ್ಲಾಸಿಕಲ್, ಫೋಕ್ ಮತ್ತು ಇನ್ನಷ್ಟು ಶೈಲಿಗಳನ್ನು ಅನ್ವೇಷಿಸಿ. ನೀವು ಆರಂಭಿಕರಾಗಿರಲಿ ಅಥವಾ ಪರಿಣಿತರಾಗಿರಲಿ, ನಾವು ನಿಮಗೆ ಮಿಂಚಲು ಸಹಾಯ ಮಾಡುತ್ತೇವೆ. 💫 ಆರಂಭಿಸಲು ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ!🔥<br>
+<strong>ಆರಂಭ ದಿನಾಂಕ:</strong> 26 ಜುಲೈ 2019
+`;
+
+translateBtn.addEventListener("click", () => {
+  if (!isKannada) {
+    aboutText.innerHTML = kannadaText;
+    translateBtn.innerText = "Translate to English";
+  } else {
+    aboutText.innerHTML = englishText;
+    translateBtn.innerText = "Translate to Kannada";
+  }
+  isKannada = !isKannada;
+});
+
 
 
 
