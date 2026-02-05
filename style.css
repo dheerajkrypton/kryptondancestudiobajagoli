@@ -1001,6 +1001,28 @@ html {
   transform: scale(1.05);
 }
 
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 64px;
+  height: 64px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  z-index: 9999;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
 
 
 
