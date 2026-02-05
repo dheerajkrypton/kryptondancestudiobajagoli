@@ -962,6 +962,10 @@ html {
   text-align: left;
 }
 
+.slider-arrow {
+  display: none; /* hide by default */
+}
+
 
 
 
