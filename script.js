@@ -51,13 +51,12 @@ document.querySelectorAll('.slider-container').forEach(container => {
   }
 
   // hide arrows if only one slide
-  if (slides.length <= 1) {
-    if (prevBtn) prevBtn.style.display = 'none';
-    if (nextBtn) nextBtn.style.display = 'none';
-  } else {
-    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
-    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-  }
+ if (slides.length > 1) {
+  container.classList.add("has-multiple");
+
+  if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+  if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+}
 
   // simple touch swipe for mobile
   let startX = null;
@@ -214,6 +213,7 @@ translateBtn.addEventListener("click", () => {
   }
   isKannada = !isKannada;
 });
+
 
 
 
