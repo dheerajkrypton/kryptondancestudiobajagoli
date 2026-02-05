@@ -243,6 +243,38 @@ KRYPTON ಡ್ಯಾನ್ಸ್ ಸ್ಟುಡಿಯೋದಲ್ಲಿ, ನೃ
     isKannada = !isKannada;
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("enquiryForm");
+  if (!form) return;
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const contact = document.getElementById("contact").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    const instructorNumber = "919606187817"; // instructor WhatsApp
+
+    const text =
+`New Enquiry – Krypton Dance Studio
+
+Name: ${name}
+Email: ${email}
+Contact: ${contact}
+Service: ${service}
+
+Message:
+${message}`;
+
+    const url = `https://wa.me/${instructorNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, "_blank");
+  });
+});
+
 
 
 
