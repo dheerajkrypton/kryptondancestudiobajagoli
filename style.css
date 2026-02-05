@@ -971,6 +971,14 @@ html {
   display: flex;
 }
 
+.slider-arrow {
+  display: none;
+}
+
+.slider-container.has-multiple .slider-arrow {
+  display: block;
+}
+
 
 
 
