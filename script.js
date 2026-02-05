@@ -156,7 +156,7 @@ function rotateReviews() {
 
 setInterval(rotateReviews, 5000);
 
-<script>
+
 document.getElementById("enquiryForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -186,7 +186,7 @@ ${message}`;
     "_blank"
   );
 });
-</script>
+
 
 const translateBtn = document.getElementById("translateBtn");
 const aboutText = document.getElementById("aboutText");
@@ -213,6 +213,7 @@ translateBtn.addEventListener("click", () => {
   }
   isKannada = !isKannada;
 });
+
 
 
 
