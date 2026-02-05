@@ -961,9 +961,14 @@ html {
   align-items: center;
   text-align: left;
 }
-
+/* Hide arrows by default */
 .slider-arrow {
-  display: none; /* hide by default */
+  display: none;
+}
+
+/* Show arrows ONLY when JS confirms multiple slides */
+.slider-container.has-multiple .slider-arrow {
+  display: flex;
 }
 
 
