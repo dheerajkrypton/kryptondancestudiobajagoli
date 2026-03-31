@@ -1029,10 +1029,34 @@ body {
   background-repeat: no-repeat;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
 
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  transition: all 0.3s ease;
+}
 
+button:hover {
+  transform: scale(1.05);
+  background-color: #a855f7;
+}
+section {
+  padding: 60px 20px;
+}
 
-
+p {
+  line-height: 1.6;
+}
+.hero-text {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
 
 
 
